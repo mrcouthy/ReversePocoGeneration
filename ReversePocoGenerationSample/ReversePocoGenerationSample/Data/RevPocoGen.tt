@@ -48,8 +48,7 @@
     
 	AdditionalContextInterfaceItems = new[] // To include extra db context interface items, include them here. Also set MakeClassesPartial=true, and implement the partial DbContext class functions.
     {
-	 "void todo(bool flag);",
-        "void SetAutoDetectChangesEnabled(bool flag);"  //  example: "void SetAutoDetectChangesEnabled(bool flag);"
+        ""  //  example: "void SetAutoDetectChangesEnabled(bool flag);"
     };
     // If you need to serialize your entities with the JsonSerializer from Newtonsoft, this would serialize
     // all properties including the Reverse Navigation and Foreign Keys. The simplest way to exclude them is

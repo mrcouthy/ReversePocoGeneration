@@ -43,8 +43,6 @@ namespace ReversePocoGenerationSample.Data
         System.Data.Entity.DbSet<UserGroup> UserGroups { get; set; } // UserGroup
         System.Data.Entity.DbSet<UserTablet> UserTablets { get; set; } // UserTablet
 
-        void todo(bool flag);
-        void SetAutoDetectChangesEnabled(bool flag);
         int SaveChanges();
         System.Threading.Tasks.Task<int> SaveChangesAsync();
         System.Threading.Tasks.Task<int> SaveChangesAsync(System.Threading.CancellationToken cancellationToken);
