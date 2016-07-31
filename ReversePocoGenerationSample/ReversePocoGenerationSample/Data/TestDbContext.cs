@@ -10,7 +10,7 @@ namespace ReversePocoGenerationSample.Data
     {
         public int GetSaveChangesCount()
         {
-            return 0;
+            return SaveChangesCount;
         }
     }
 
@@ -18,7 +18,7 @@ namespace ReversePocoGenerationSample.Data
     {
         public int GetSaveChangesCount()
         {
-            return 0;
+            return SaveChangesCount;
         }
     }
 }
