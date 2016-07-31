@@ -48,10 +48,10 @@ namespace ReversePocoGenerationSample.Entities
         public bool IsUpdated { get; set; } // IsUpdated
 
         // Reverse navigation
-        public virtual System.Collections.Generic.ICollection<Answer> Answers { get; set; } // Answer.FK_Answer_Question
         public virtual System.Collections.Generic.ICollection<MatrixCol> MatrixCols { get; set; } // MatrixCol.FK_dbo.MatrixCol_dbo.Question_QuestionId
         public virtual System.Collections.Generic.ICollection<MatrixRow> MatrixRows { get; set; } // MatrixRow.FK_dbo.MatrixRow_dbo.Question_QuestionId
         public virtual System.Collections.Generic.ICollection<QuestionOption> QuestionOptions { get; set; } // QuestionOption.FK_dbo.QuestionOption_dbo.Question_QuestionId
+        public virtual System.Collections.Generic.ICollection<Wer> Wers { get; set; } // Answer.FK_Answer_Question
 
         // Foreign keys
         public virtual QuestionType QuestionType { get; set; } // FK_dbo.Question_dbo.QuestionType_QuestionTypeId
@@ -59,7 +59,7 @@ namespace ReversePocoGenerationSample.Entities
 
         public Question()
         {
-            Answers = new System.Collections.Generic.List<Answer>();
+            Wers = new System.Collections.Generic.List<Wer>();
             MatrixCols = new System.Collections.Generic.List<MatrixCol>();
             MatrixRows = new System.Collections.Generic.List<MatrixRow>();
             QuestionOptions = new System.Collections.Generic.List<QuestionOption>();

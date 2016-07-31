@@ -16,7 +16,7 @@ namespace ReversePocoGenerationSample.Entities
 
     // Answer
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.22.1.0")]
-    public partial class Answer
+    public partial class Wer
     {
         public int AnswerId { get; set; } // AnswerId (Primary key)
         public int? QuestionId { get; set; } // QuestionId
@@ -38,7 +38,7 @@ namespace ReversePocoGenerationSample.Entities
         public virtual Question Question { get; set; } // FK_Answer_Question
         public virtual QuestionOption QuestionOption { get; set; } // FK_Answer_QuestionOption
 
-        public Answer()
+        public Wer()
         {
             CreatedOn = System.DateTime.Now;
             InitializePartial();

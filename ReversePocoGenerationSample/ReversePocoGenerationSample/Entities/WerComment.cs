@@ -16,14 +16,14 @@ namespace ReversePocoGenerationSample.Entities
 
     // AnswerComment
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.22.1.0")]
-    public partial class AnswerComment
+    public partial class WerComment
     {
         public int QuestionCommentId { get; set; } // QuestionCommentId (Primary key)
         public int? QuestionId { get; set; } // QuestionId
         public string Comment { get; set; } // Comment
         public string SurveyeeGuid { get; set; } // SurveyeeGuid (length: 36)
 
-        public AnswerComment()
+        public WerComment()
         {
             InitializePartial();
         }

@@ -26,14 +26,14 @@ namespace ReversePocoGenerationSample.Entities
         public System.DateTime? ModifiedOn { get; set; } // ModifiedOn
 
         // Reverse navigation
-        public virtual System.Collections.Generic.ICollection<Answer> Answers { get; set; } // Answer.FK_Answer_QuestionOption
+        public virtual System.Collections.Generic.ICollection<Wer> Wers { get; set; } // Answer.FK_Answer_QuestionOption
 
         // Foreign keys
         public virtual Question Question { get; set; } // FK_dbo.QuestionOption_dbo.Question_QuestionId
 
         public QuestionOption()
         {
-            Answers = new System.Collections.Generic.List<Answer>();
+            Wers = new System.Collections.Generic.List<Wer>();
             InitializePartial();
         }
 

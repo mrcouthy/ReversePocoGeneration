@@ -163,19 +163,14 @@
     // Table renaming *********************************************************************************************************************
     // Use the following function to rename tables such as tblOrders to Orders, Shipments_AB to Shipments, etc.
     // Example:
-    TableRename = (name, schema) =>
+   TableRename = (name, schema) =>
     {
-        // Example
-        //if (name.StartsWith("tbl"))
-        //    name = name.Remove(0, 3);
-        //name = name.Replace("_AB", "");
+        if (name.StartsWith("An") || name.StartsWith("AB_"))
+            name = name.Remove(0, 3);
+        if (name == "Treez")
+            name = "Trees";
+        return name.Replace("AB_", "V2");
 
-        // If you turn camel casing off (UseCamelCase = false), and use the pluralisation service, and some of your
-        // tables names are all UPPERCASE, some words ending in IES such as CATEGORIES get singularised as CATEGORy.
-        // Therefore you can make them lowercase by using the following
-        // return Inflector.MakeLowerIfAllCaps(name);
-
-        return name;
     };
 
     // Column modification*****************************************************************************************************************
