@@ -13,23 +13,13 @@
 namespace ReversePocoGenerationSample.Data
 {
 
-    // QuestionType
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.22.1.0")]
     public partial class QuestionType
     {
-
-        ///<summary>
-        /// QuestionTypeId (Primary key)
-        ///</summary>
         public int QuestionTypeId { get; set; }
-
-        ///<summary>
-        /// Type
-        ///</summary>
         public string Type { get; set; }
 
-        // Reverse navigation
-        public virtual System.Collections.Generic.ICollection<Question> Questions { get; set; } // Question.FK_dbo.Question_dbo.QuestionType_QuestionTypeId
+        public virtual System.Collections.Generic.ICollection<Question> Questions { get; set; }
 
         public QuestionType()
         {

@@ -13,68 +13,22 @@
 namespace ReversePocoGenerationSample.Data
 {
 
-    // Organization
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.22.1.0")]
     public partial class Organization
     {
-
-        ///<summary>
-        /// OrganizationId (Primary key)
-        ///</summary>
         public int OrganizationId { get; set; }
-
-        ///<summary>
-        /// Name
-        ///</summary>
         public string Name { get; set; }
-
-        ///<summary>
-        /// Logo
-        ///</summary>
         public string Logo { get; set; }
-
-        ///<summary>
-        /// CreatedBy
-        ///</summary>
         public string CreatedBy { get; set; }
-
-        ///<summary>
-        /// CreatedOn
-        ///</summary>
         public System.DateTime? CreatedOn { get; set; }
-
-        ///<summary>
-        /// ModifiedBy
-        ///</summary>
         public string ModifiedBy { get; set; }
-
-        ///<summary>
-        /// ModifiedOn
-        ///</summary>
         public System.DateTime? ModifiedOn { get; set; }
-
-        ///<summary>
-        /// DeletedBy
-        ///</summary>
         public string DeletedBy { get; set; }
-
-        ///<summary>
-        /// DeletedOn
-        ///</summary>
         public System.DateTime? DeletedOn { get; set; }
-
-        ///<summary>
-        /// IsActive
-        ///</summary>
         public bool IsActive { get; set; }
-
-        ///<summary>
-        /// IsDeleted
-        ///</summary>
         public bool IsDeleted { get; set; }
 
-        // Reverse navigation
-        public virtual System.Collections.Generic.ICollection<Survey> Surveys { get; set; } // Survey.FK_dbo.Survey_dbo.Organization_OrganizationId
+        public virtual System.Collections.Generic.ICollection<Survey> Surveys { get; set; }
 
         public Organization()
         {

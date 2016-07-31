@@ -13,69 +13,23 @@
 namespace ReversePocoGenerationSample.Data
 {
 
-    // UserTablet
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.22.1.0")]
     public partial class UserTablet
     {
-
-        ///<summary>
-        /// UserTabletId (Primary key)
-        ///</summary>
         public int UserTabletId { get; set; }
-
-        ///<summary>
-        /// UserId
-        ///</summary>
         public int UserId { get; set; }
-
-        ///<summary>
-        /// TabletId
-        ///</summary>
         public int TabletId { get; set; }
-
-        ///<summary>
-        /// CreatedBy
-        ///</summary>
         public string CreatedBy { get; set; }
-
-        ///<summary>
-        /// CreatedOn
-        ///</summary>
         public System.DateTime? CreatedOn { get; set; }
-
-        ///<summary>
-        /// ModifiedBy
-        ///</summary>
         public string ModifiedBy { get; set; }
-
-        ///<summary>
-        /// ModifiedOn
-        ///</summary>
         public System.DateTime? ModifiedOn { get; set; }
-
-        ///<summary>
-        /// DeletedBy
-        ///</summary>
         public string DeletedBy { get; set; }
-
-        ///<summary>
-        /// DeletedOn
-        ///</summary>
         public System.DateTime? DeletedOn { get; set; }
-
-        ///<summary>
-        /// IsActive
-        ///</summary>
         public bool IsActive { get; set; }
-
-        ///<summary>
-        /// IsDeleted
-        ///</summary>
         public bool IsDeleted { get; set; }
 
-        // Foreign keys
-        public virtual Tablet Tablet { get; set; } // FK_dbo.UserTablet_dbo.Tablet_TabletId
-        public virtual User User { get; set; } // FK_dbo.UserTablet_dbo.User_UserId
+        public virtual Tablet Tablet { get; set; }
+        public virtual User User { get; set; }
 
         public UserTablet()
         {

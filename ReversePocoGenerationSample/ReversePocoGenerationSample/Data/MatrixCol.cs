@@ -13,38 +13,16 @@
 namespace ReversePocoGenerationSample.Data
 {
 
-    // MatrixCol
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.22.1.0")]
     public partial class MatrixCol
     {
-
-        ///<summary>
-        /// ColumnId (Primary key)
-        ///</summary>
         public int ColumnId { get; set; }
-
-        ///<summary>
-        /// ColumnLabel
-        ///</summary>
         public string ColumnLabel { get; set; }
-
-        ///<summary>
-        /// QuestionId
-        ///</summary>
         public int QuestionId { get; set; }
-
-        ///<summary>
-        /// CreatedOn
-        ///</summary>
         public System.DateTime? CreatedOn { get; set; }
-
-        ///<summary>
-        /// ModifiedOn
-        ///</summary>
         public System.DateTime? ModifiedOn { get; set; }
 
-        // Foreign keys
-        public virtual Question Question { get; set; } // FK_dbo.MatrixCol_dbo.Question_QuestionId
+        public virtual Question Question { get; set; }
 
         public MatrixCol()
         {

@@ -13,7 +13,6 @@
 namespace ReversePocoGenerationSample.Data
 {
 
-    // Answer
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.22.1.0")]
     public partial class AnswerMapping : System.Data.Entity.ModelConfiguration.EntityTypeConfiguration<Answer>
     {
@@ -43,9 +42,8 @@ namespace ReversePocoGenerationSample.Data
             Property(x => x.MatrixColId).HasColumnName(@"MatrixColId").IsOptional().HasColumnType("int");
             Property(x => x.MatrixRowId).HasColumnName(@"MatrixRowId").IsOptional().HasColumnType("int");
 
-            // Foreign keys
-            HasOptional(a => a.Question).WithMany(b => b.Answers).HasForeignKey(c => c.QuestionId).WillCascadeOnDelete(false); // FK_Answer_Question
-            HasOptional(a => a.QuestionOption).WithMany(b => b.Answers).HasForeignKey(c => c.QuestionOptionId).WillCascadeOnDelete(false); // FK_Answer_QuestionOption
+            HasOptional(a => a.Question).WithMany(b => b.Answers).HasForeignKey(c => c.QuestionId).WillCascadeOnDelete(false);
+            HasOptional(a => a.QuestionOption).WithMany(b => b.Answers).HasForeignKey(c => c.QuestionOptionId).WillCascadeOnDelete(false);
             InitializePartial();
         }
         partial void InitializePartial();

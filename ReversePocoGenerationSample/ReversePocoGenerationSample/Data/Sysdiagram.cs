@@ -13,34 +13,13 @@
 namespace ReversePocoGenerationSample.Data
 {
 
-    // sysdiagrams
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.22.1.0")]
     public partial class Sysdiagram
     {
-
-        ///<summary>
-        /// name (length: 128)
-        ///</summary>
         public string Name { get; set; }
-
-        ///<summary>
-        /// principal_id
-        ///</summary>
         public int PrincipalId { get; set; }
-
-        ///<summary>
-        /// diagram_id (Primary key)
-        ///</summary>
         public int DiagramId { get; set; }
-
-        ///<summary>
-        /// version
-        ///</summary>
         public int? Version { get; set; }
-
-        ///<summary>
-        /// definition
-        ///</summary>
         public byte[] Definition { get; set; }
 
         public Sysdiagram()

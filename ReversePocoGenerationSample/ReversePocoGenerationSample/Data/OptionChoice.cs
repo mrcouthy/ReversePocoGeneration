@@ -13,24 +13,11 @@
 namespace ReversePocoGenerationSample.Data
 {
 
-    // OptionChoice
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.22.1.0")]
     public partial class OptionChoice
     {
-
-        ///<summary>
-        /// OptionChoiceId (Primary key)
-        ///</summary>
         public int OptionChoiceId { get; set; }
-
-        ///<summary>
-        /// OptionChoiceLabel
-        ///</summary>
         public string OptionChoiceLabel { get; set; }
-
-        ///<summary>
-        /// IsDropdown
-        ///</summary>
         public bool IsDropdown { get; set; }
 
         public OptionChoice()

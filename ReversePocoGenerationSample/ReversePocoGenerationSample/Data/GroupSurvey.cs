@@ -13,69 +13,23 @@
 namespace ReversePocoGenerationSample.Data
 {
 
-    // GroupSurvey
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.22.1.0")]
     public partial class GroupSurvey
     {
-
-        ///<summary>
-        /// GroupSurveyId (Primary key)
-        ///</summary>
         public int GroupSurveyId { get; set; }
-
-        ///<summary>
-        /// GroupId
-        ///</summary>
         public int GroupId { get; set; }
-
-        ///<summary>
-        /// SurveyId
-        ///</summary>
         public int SurveyId { get; set; }
-
-        ///<summary>
-        /// CreatedBy
-        ///</summary>
         public string CreatedBy { get; set; }
-
-        ///<summary>
-        /// CreatedOn
-        ///</summary>
         public System.DateTime? CreatedOn { get; set; }
-
-        ///<summary>
-        /// ModifiedBy
-        ///</summary>
         public string ModifiedBy { get; set; }
-
-        ///<summary>
-        /// ModifiedOn
-        ///</summary>
         public System.DateTime? ModifiedOn { get; set; }
-
-        ///<summary>
-        /// DeletedBy
-        ///</summary>
         public string DeletedBy { get; set; }
-
-        ///<summary>
-        /// DeletedOn
-        ///</summary>
         public System.DateTime? DeletedOn { get; set; }
-
-        ///<summary>
-        /// IsActive
-        ///</summary>
         public bool IsActive { get; set; }
-
-        ///<summary>
-        /// IsDeleted
-        ///</summary>
         public bool IsDeleted { get; set; }
 
-        // Foreign keys
-        public virtual Group Group { get; set; } // FK_dbo.GroupSurvey_dbo.Group_GroupId
-        public virtual Survey Survey { get; set; } // FK_dbo.GroupSurvey_dbo.Survey_SurveyId
+        public virtual Group Group { get; set; }
+        public virtual Survey Survey { get; set; }
 
         public GroupSurvey()
         {

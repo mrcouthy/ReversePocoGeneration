@@ -13,105 +13,31 @@
 namespace ReversePocoGenerationSample.Data
 {
 
-    // User
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.22.1.0")]
     public partial class User
     {
-
-        ///<summary>
-        /// UserId (Primary key)
-        ///</summary>
         public int UserId { get; set; }
-
-        ///<summary>
-        /// FirstName
-        ///</summary>
         public string FirstName { get; set; }
-
-        ///<summary>
-        /// LastName
-        ///</summary>
         public string LastName { get; set; }
-
-        ///<summary>
-        /// Address
-        ///</summary>
         public string Address { get; set; }
-
-        ///<summary>
-        /// Phone
-        ///</summary>
         public string Phone { get; set; }
-
-        ///<summary>
-        /// UserName
-        ///</summary>
         public string UserName { get; set; }
-
-        ///<summary>
-        /// Password
-        ///</summary>
         public string Password { get; set; }
-
-        ///<summary>
-        /// LastLoginDate
-        ///</summary>
         public System.DateTime LastLoginDate { get; set; }
-
-        ///<summary>
-        /// PwdChangeDays
-        ///</summary>
         public int PwdChangeDays { get; set; }
-
-        ///<summary>
-        /// PwdChangeWarningDays
-        ///</summary>
         public int PwdChangeWarningDays { get; set; }
-
-        ///<summary>
-        /// CreatedBy
-        ///</summary>
         public string CreatedBy { get; set; }
-
-        ///<summary>
-        /// CreatedOn
-        ///</summary>
         public System.DateTime? CreatedOn { get; set; }
-
-        ///<summary>
-        /// ModifiedBy
-        ///</summary>
         public string ModifiedBy { get; set; }
-
-        ///<summary>
-        /// ModifiedOn
-        ///</summary>
         public System.DateTime? ModifiedOn { get; set; }
-
-        ///<summary>
-        /// DeletedBy
-        ///</summary>
         public string DeletedBy { get; set; }
-
-        ///<summary>
-        /// DeletedOn
-        ///</summary>
         public System.DateTime? DeletedOn { get; set; }
-
-        ///<summary>
-        /// IsActive
-        ///</summary>
         public bool IsActive { get; set; }
-
-        ///<summary>
-        /// IsDeleted
-        ///</summary>
         public bool IsDeleted { get; set; }
 
-        // Reverse navigation
-        public virtual System.Collections.Generic.ICollection<Role> Roles { get; set; } // Many to many mapping
-        public virtual System.Collections.Generic.ICollection<UserGroup> UserGroups { get; set; } // UserGroup.FK_dbo.UserGroup_dbo.User_UserId
-        public virtual System.Collections.Generic.ICollection<UserTablet> UserTablets { get; set; } // UserTablet.FK_dbo.UserTablet_dbo.User_UserId
+        public virtual System.Collections.Generic.ICollection<Role> Roles { get; set; }
+        public virtual System.Collections.Generic.ICollection<UserGroup> UserGroups { get; set; }
+        public virtual System.Collections.Generic.ICollection<UserTablet> UserTablets { get; set; }
 
         public User()
         {

@@ -13,39 +13,14 @@
 namespace ReversePocoGenerationSample.Data
 {
 
-    // MenuItem
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.22.1.0")]
     public partial class MenuItem
     {
-
-        ///<summary>
-        /// Id (Primary key)
-        ///</summary>
         public int Id { get; set; }
-
-        ///<summary>
-        /// Action
-        ///</summary>
         public string Action { get; set; }
-
-        ///<summary>
-        /// Controller
-        ///</summary>
         public string Controller { get; set; }
-
-        ///<summary>
-        /// LinkText
-        ///</summary>
         public string LinkText { get; set; }
-
-        ///<summary>
-        /// ModuleId
-        ///</summary>
         public int ModuleId { get; set; }
-
-        ///<summary>
-        /// ParentId
-        ///</summary>
         public int? ParentId { get; set; }
 
         public MenuItem()

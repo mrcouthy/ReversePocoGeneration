@@ -13,7 +13,6 @@
 namespace ReversePocoGenerationSample.Data
 {
 
-    // Organization
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.22.1.0")]
     public partial class OrganizationMapping : System.Data.Entity.ModelConfiguration.EntityTypeConfiguration<Organization>
     {

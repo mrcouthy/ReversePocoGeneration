@@ -13,7 +13,6 @@
 namespace ReversePocoGenerationSample.Data
 {
 
-    // Role
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.22.1.0")]
     public partial class RoleMapping : System.Data.Entity.ModelConfiguration.EntityTypeConfiguration<Role>
     {

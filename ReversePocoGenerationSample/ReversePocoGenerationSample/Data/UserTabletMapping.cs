@@ -13,7 +13,6 @@
 namespace ReversePocoGenerationSample.Data
 {
 
-    // UserTablet
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.22.1.0")]
     public partial class UserTabletMapping : System.Data.Entity.ModelConfiguration.EntityTypeConfiguration<UserTablet>
     {
@@ -39,9 +38,8 @@ namespace ReversePocoGenerationSample.Data
             Property(x => x.IsActive).HasColumnName(@"IsActive").IsRequired().HasColumnType("bit");
             Property(x => x.IsDeleted).HasColumnName(@"IsDeleted").IsRequired().HasColumnType("bit");
 
-            // Foreign keys
-            HasRequired(a => a.Tablet).WithMany(b => b.UserTablets).HasForeignKey(c => c.TabletId); // FK_dbo.UserTablet_dbo.Tablet_TabletId
-            HasRequired(a => a.User).WithMany(b => b.UserTablets).HasForeignKey(c => c.UserId); // FK_dbo.UserTablet_dbo.User_UserId
+            HasRequired(a => a.Tablet).WithMany(b => b.UserTablets).HasForeignKey(c => c.TabletId);
+            HasRequired(a => a.User).WithMany(b => b.UserTablets).HasForeignKey(c => c.UserId);
             InitializePartial();
         }
         partial void InitializePartial();

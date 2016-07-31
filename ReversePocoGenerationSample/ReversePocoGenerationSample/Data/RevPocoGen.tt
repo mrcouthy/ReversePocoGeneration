@@ -26,7 +26,7 @@
 
     UseMappingTables = true; // If true, mapping will be used and no mapping tables will be generated. If false, all tables will be generated.
     UseCamelCase = true;    // This will rename the tables & fields to use CamelCase. If false table & field names will be left alone.
-    IncludeComments = CommentsStyle.InSummaryBlock; // Adds comments to the generated code
+    IncludeComments = CommentsStyle.None; // Adds comments to the generated code
     
 	IncludeExtendedPropertyComments = CommentsStyle.InSummaryBlock; // Adds extended properties as comments to the generated code
     IncludeViews = true;

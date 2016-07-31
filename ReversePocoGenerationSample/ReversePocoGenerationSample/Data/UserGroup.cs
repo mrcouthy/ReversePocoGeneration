@@ -13,74 +13,24 @@
 namespace ReversePocoGenerationSample.Data
 {
 
-    // UserGroup
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.22.1.0")]
     public partial class UserGroup
     {
-
-        ///<summary>
-        /// UserGroupId (Primary key)
-        ///</summary>
         public int UserGroupId { get; set; }
-
-        ///<summary>
-        /// UserId
-        ///</summary>
         public int UserId { get; set; }
-
-        ///<summary>
-        /// GroupId
-        ///</summary>
         public int GroupId { get; set; }
-
-        ///<summary>
-        /// IsSuperVisor
-        ///</summary>
         public bool IsSuperVisor { get; set; }
-
-        ///<summary>
-        /// CreatedBy
-        ///</summary>
         public string CreatedBy { get; set; }
-
-        ///<summary>
-        /// CreatedOn
-        ///</summary>
         public System.DateTime? CreatedOn { get; set; }
-
-        ///<summary>
-        /// ModifiedBy
-        ///</summary>
         public string ModifiedBy { get; set; }
-
-        ///<summary>
-        /// ModifiedOn
-        ///</summary>
         public System.DateTime? ModifiedOn { get; set; }
-
-        ///<summary>
-        /// DeletedBy
-        ///</summary>
         public string DeletedBy { get; set; }
-
-        ///<summary>
-        /// DeletedOn
-        ///</summary>
         public System.DateTime? DeletedOn { get; set; }
-
-        ///<summary>
-        /// IsActive
-        ///</summary>
         public bool IsActive { get; set; }
-
-        ///<summary>
-        /// IsDeleted
-        ///</summary>
         public bool IsDeleted { get; set; }
 
-        // Foreign keys
-        public virtual Group Group { get; set; } // FK_dbo.UserGroup_dbo.Group_GroupId
-        public virtual User User { get; set; } // FK_dbo.UserGroup_dbo.User_UserId
+        public virtual Group Group { get; set; }
+        public virtual User User { get; set; }
 
         public UserGroup()
         {

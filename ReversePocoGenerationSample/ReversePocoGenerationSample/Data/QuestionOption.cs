@@ -13,46 +13,19 @@
 namespace ReversePocoGenerationSample.Data
 {
 
-    // QuestionOption
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.22.1.0")]
     public partial class QuestionOption
     {
-
-        ///<summary>
-        /// QuestionOptionId (Primary key)
-        ///</summary>
         public int QuestionOptionId { get; set; }
-
-        ///<summary>
-        /// OptionChoiceLabel
-        ///</summary>
         public string OptionChoiceLabel { get; set; }
-
-        ///<summary>
-        /// IsDropdown
-        ///</summary>
         public bool IsDropdown { get; set; }
-
-        ///<summary>
-        /// QuestionId
-        ///</summary>
         public int QuestionId { get; set; }
-
-        ///<summary>
-        /// CreatedOn
-        ///</summary>
         public System.DateTime? CreatedOn { get; set; }
-
-        ///<summary>
-        /// ModifiedOn
-        ///</summary>
         public System.DateTime? ModifiedOn { get; set; }
 
-        // Reverse navigation
-        public virtual System.Collections.Generic.ICollection<Answer> Answers { get; set; } // Answer.FK_Answer_QuestionOption
+        public virtual System.Collections.Generic.ICollection<Answer> Answers { get; set; }
 
-        // Foreign keys
-        public virtual Question Question { get; set; } // FK_dbo.QuestionOption_dbo.Question_QuestionId
+        public virtual Question Question { get; set; }
 
         public QuestionOption()
         {

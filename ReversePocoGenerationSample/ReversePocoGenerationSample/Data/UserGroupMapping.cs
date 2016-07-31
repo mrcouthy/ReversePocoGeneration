@@ -13,7 +13,6 @@
 namespace ReversePocoGenerationSample.Data
 {
 
-    // UserGroup
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.22.1.0")]
     public partial class UserGroupMapping : System.Data.Entity.ModelConfiguration.EntityTypeConfiguration<UserGroup>
     {
@@ -40,9 +39,8 @@ namespace ReversePocoGenerationSample.Data
             Property(x => x.IsActive).HasColumnName(@"IsActive").IsRequired().HasColumnType("bit");
             Property(x => x.IsDeleted).HasColumnName(@"IsDeleted").IsRequired().HasColumnType("bit");
 
-            // Foreign keys
-            HasRequired(a => a.Group).WithMany(b => b.UserGroups).HasForeignKey(c => c.GroupId); // FK_dbo.UserGroup_dbo.Group_GroupId
-            HasRequired(a => a.User).WithMany(b => b.UserGroups).HasForeignKey(c => c.UserId); // FK_dbo.UserGroup_dbo.User_UserId
+            HasRequired(a => a.Group).WithMany(b => b.UserGroups).HasForeignKey(c => c.GroupId);
+            HasRequired(a => a.User).WithMany(b => b.UserGroups).HasForeignKey(c => c.UserId);
             InitializePartial();
         }
         partial void InitializePartial();

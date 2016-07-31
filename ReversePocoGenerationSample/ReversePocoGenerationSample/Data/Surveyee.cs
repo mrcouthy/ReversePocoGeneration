@@ -13,64 +13,19 @@
 namespace ReversePocoGenerationSample.Data
 {
 
-    // Surveyee
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.22.1.0")]
     public partial class Surveyee
     {
-
-        ///<summary>
-        /// Title
-        ///</summary>
         public string Title { get; set; }
-
-        ///<summary>
-        /// Code
-        ///</summary>
         public string Code { get; set; }
-
-        ///<summary>
-        /// Description
-        ///</summary>
         public string Description { get; set; }
-
-        ///<summary>
-        /// CreatedOn
-        ///</summary>
         public System.DateTime CreatedOn { get; set; }
-
-        ///<summary>
-        /// ModifiedOn
-        ///</summary>
         public System.DateTime? ModifiedOn { get; set; }
-
-        ///<summary>
-        /// DeletedOn
-        ///</summary>
         public System.DateTime? DeletedOn { get; set; }
-
-        ///<summary>
-        /// CreatedBy
-        ///</summary>
         public int? CreatedBy { get; set; }
-
-        ///<summary>
-        /// ModifiedBy
-        ///</summary>
         public int? ModifiedBy { get; set; }
-
-        ///<summary>
-        /// DeletedBy
-        ///</summary>
         public int? DeletedBy { get; set; }
-
-        ///<summary>
-        /// Status (length: 10)
-        ///</summary>
         public string Status { get; set; }
-
-        ///<summary>
-        /// SurveyeeGuid (Primary key) (length: 36)
-        ///</summary>
         public string SurveyeeGuid { get; set; }
 
         public Surveyee()

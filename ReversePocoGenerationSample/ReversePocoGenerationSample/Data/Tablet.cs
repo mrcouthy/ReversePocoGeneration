@@ -13,73 +13,23 @@
 namespace ReversePocoGenerationSample.Data
 {
 
-    // Tablet
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.22.1.0")]
     public partial class Tablet
     {
-
-        ///<summary>
-        /// TabletId (Primary key)
-        ///</summary>
         public int TabletId { get; set; }
-
-        ///<summary>
-        /// Code
-        ///</summary>
         public string Code { get; set; }
-
-        ///<summary>
-        /// OperatingSystem
-        ///</summary>
         public string OperatingSystem { get; set; }
-
-        ///<summary>
-        /// Description
-        ///</summary>
         public string Description { get; set; }
-
-        ///<summary>
-        /// CreatedBy
-        ///</summary>
         public string CreatedBy { get; set; }
-
-        ///<summary>
-        /// CreatedOn
-        ///</summary>
         public System.DateTime? CreatedOn { get; set; }
-
-        ///<summary>
-        /// ModifiedBy
-        ///</summary>
         public string ModifiedBy { get; set; }
-
-        ///<summary>
-        /// ModifiedOn
-        ///</summary>
         public System.DateTime? ModifiedOn { get; set; }
-
-        ///<summary>
-        /// DeletedBy
-        ///</summary>
         public string DeletedBy { get; set; }
-
-        ///<summary>
-        /// DeletedOn
-        ///</summary>
         public System.DateTime? DeletedOn { get; set; }
-
-        ///<summary>
-        /// IsActive
-        ///</summary>
         public bool IsActive { get; set; }
-
-        ///<summary>
-        /// IsDeleted
-        ///</summary>
         public bool IsDeleted { get; set; }
 
-        // Reverse navigation
-        public virtual System.Collections.Generic.ICollection<UserTablet> UserTablets { get; set; } // UserTablet.FK_dbo.UserTablet_dbo.Tablet_TabletId
+        public virtual System.Collections.Generic.ICollection<UserTablet> UserTablets { get; set; }
 
         public Tablet()
         {

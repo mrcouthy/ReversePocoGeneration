@@ -13,29 +13,12 @@
 namespace ReversePocoGenerationSample.Data
 {
 
-    // SurveyeeSurveyComment
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.22.1.0")]
     public partial class SurveyeeSurveyComment
     {
-
-        ///<summary>
-        /// CommentId (Primary key)
-        ///</summary>
         public int CommentId { get; set; }
-
-        ///<summary>
-        /// SurveyeeId
-        ///</summary>
         public int SurveyeeId { get; set; }
-
-        ///<summary>
-        /// SurveyId
-        ///</summary>
         public int SurveyId { get; set; }
-
-        ///<summary>
-        /// Comment
-        ///</summary>
         public string Comment { get; set; }
 
         public SurveyeeSurveyComment()
