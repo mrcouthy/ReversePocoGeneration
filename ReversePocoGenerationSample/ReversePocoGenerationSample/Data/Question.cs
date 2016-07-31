@@ -13,45 +13,48 @@
 namespace ReversePocoGenerationSample.Data
 {
 
+    // Question
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.22.1.0")]
     public partial class Question
     {
-        public int QuestionId { get; set; }
-        public int PrecedingQuestionId { get; set; }
-        public string Code { get; set; }
-        public string QuestionText { get; set; }
-        public bool Required { get; set; }
-        public bool OnlyNumericValue { get; set; }
-        public bool IncludeComment { get; set; }
-        public string Comment { get; set; }
-        public int QuestionOrder { get; set; }
-        public int DependentQuestionId { get; set; }
-        public int DependentQuestionOptionId { get; set; }
-        public bool AllowMultipleChoice { get; set; }
-        public int JumpQuestionId { get; set; }
-        public int JumpQuestionOptionId { get; set; }
-        public bool HasPredefinedDropdown { get; set; }
-        public int PredefinedDropdownId { get; set; }
-        public int SectionId { get; set; }
-        public int QuestionTypeId { get; set; }
-        public int RuleId { get; set; }
-        public string CreatedBy { get; set; }
-        public System.DateTime? CreatedOn { get; set; }
-        public string ModifiedBy { get; set; }
-        public System.DateTime? ModifiedOn { get; set; }
-        public string DeletedBy { get; set; }
-        public System.DateTime? DeletedOn { get; set; }
-        public bool IsActive { get; set; }
-        public bool IsDeleted { get; set; }
-        public bool IsUpdated { get; set; }
+        public int QuestionId { get; set; } // QuestionId (Primary key)
+        public int PrecedingQuestionId { get; set; } // PrecedingQuestionId
+        public string Code { get; set; } // Code
+        public string QuestionText { get; set; } // QuestionText
+        public bool Required { get; set; } // Required
+        public bool OnlyNumericValue { get; set; } // OnlyNumericValue
+        public bool IncludeComment { get; set; } // IncludeComment
+        public string Comment { get; set; } // Comment
+        public int QuestionOrder { get; set; } // QuestionOrder
+        public int DependentQuestionId { get; set; } // DependentQuestionId
+        public int DependentQuestionOptionId { get; set; } // DependentQuestionOptionId
+        public bool AllowMultipleChoice { get; set; } // AllowMultipleChoice
+        public int JumpQuestionId { get; set; } // JumpQuestionId
+        public int JumpQuestionOptionId { get; set; } // JumpQuestionOptionId
+        public bool HasPredefinedDropdown { get; set; } // HasPredefinedDropdown
+        public int PredefinedDropdownId { get; set; } // PredefinedDropdownId
+        public int SectionId { get; set; } // SectionId
+        public int QuestionTypeId { get; set; } // QuestionTypeId
+        public int RuleId { get; set; } // RuleId
+        public string CreatedBy { get; set; } // CreatedBy
+        public System.DateTime? CreatedOn { get; set; } // CreatedOn
+        public string ModifiedBy { get; set; } // ModifiedBy
+        public System.DateTime? ModifiedOn { get; set; } // ModifiedOn
+        public string DeletedBy { get; set; } // DeletedBy
+        public System.DateTime? DeletedOn { get; set; } // DeletedOn
+        public bool IsActive { get; set; } // IsActive
+        public bool IsDeleted { get; set; } // IsDeleted
+        public bool IsUpdated { get; set; } // IsUpdated
 
-        public virtual System.Collections.Generic.ICollection<Answer> Answers { get; set; }
-        public virtual System.Collections.Generic.ICollection<MatrixCol> MatrixCols { get; set; }
-        public virtual System.Collections.Generic.ICollection<MatrixRow> MatrixRows { get; set; }
-        public virtual System.Collections.Generic.ICollection<QuestionOption> QuestionOptions { get; set; }
+        // Reverse navigation
+        public virtual System.Collections.Generic.ICollection<Answer> Answers { get; set; } // Answer.FK_Answer_Question
+        public virtual System.Collections.Generic.ICollection<MatrixCol> MatrixCols { get; set; } // MatrixCol.FK_dbo.MatrixCol_dbo.Question_QuestionId
+        public virtual System.Collections.Generic.ICollection<MatrixRow> MatrixRows { get; set; } // MatrixRow.FK_dbo.MatrixRow_dbo.Question_QuestionId
+        public virtual System.Collections.Generic.ICollection<QuestionOption> QuestionOptions { get; set; } // QuestionOption.FK_dbo.QuestionOption_dbo.Question_QuestionId
 
-        public virtual QuestionType QuestionType { get; set; }
-        public virtual SurveySection SurveySection { get; set; }
+        // Foreign keys
+        public virtual QuestionType QuestionType { get; set; } // FK_dbo.Question_dbo.QuestionType_QuestionTypeId
+        public virtual SurveySection SurveySection { get; set; } // FK_dbo.Question_dbo.SurveySection_SectionId
 
         public Question()
         {

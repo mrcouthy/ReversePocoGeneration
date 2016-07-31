@@ -13,6 +13,7 @@
 namespace ReversePocoGenerationSample.Data
 {
 
+    // sysdiagrams
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.22.1.0")]
     public partial class SysdiagramMapping : System.Data.Entity.ModelConfiguration.EntityTypeConfiguration<Sysdiagram>
     {

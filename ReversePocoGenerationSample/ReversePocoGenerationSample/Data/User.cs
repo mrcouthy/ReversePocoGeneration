@@ -13,31 +13,33 @@
 namespace ReversePocoGenerationSample.Data
 {
 
+    // User
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.22.1.0")]
     public partial class User
     {
-        public int UserId { get; set; }
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-        public string Address { get; set; }
-        public string Phone { get; set; }
-        public string UserName { get; set; }
-        public string Password { get; set; }
-        public System.DateTime LastLoginDate { get; set; }
-        public int PwdChangeDays { get; set; }
-        public int PwdChangeWarningDays { get; set; }
-        public string CreatedBy { get; set; }
-        public System.DateTime? CreatedOn { get; set; }
-        public string ModifiedBy { get; set; }
-        public System.DateTime? ModifiedOn { get; set; }
-        public string DeletedBy { get; set; }
-        public System.DateTime? DeletedOn { get; set; }
-        public bool IsActive { get; set; }
-        public bool IsDeleted { get; set; }
+        public int UserId { get; set; } // UserId (Primary key)
+        public string FirstName { get; set; } // FirstName
+        public string LastName { get; set; } // LastName
+        public string Address { get; set; } // Address
+        public string Phone { get; set; } // Phone
+        public string UserName { get; set; } // UserName
+        public string Password { get; set; } // Password
+        public System.DateTime LastLoginDate { get; set; } // LastLoginDate
+        public int PwdChangeDays { get; set; } // PwdChangeDays
+        public int PwdChangeWarningDays { get; set; } // PwdChangeWarningDays
+        public string CreatedBy { get; set; } // CreatedBy
+        public System.DateTime? CreatedOn { get; set; } // CreatedOn
+        public string ModifiedBy { get; set; } // ModifiedBy
+        public System.DateTime? ModifiedOn { get; set; } // ModifiedOn
+        public string DeletedBy { get; set; } // DeletedBy
+        public System.DateTime? DeletedOn { get; set; } // DeletedOn
+        public bool IsActive { get; set; } // IsActive
+        public bool IsDeleted { get; set; } // IsDeleted
 
-        public virtual System.Collections.Generic.ICollection<Role> Roles { get; set; }
-        public virtual System.Collections.Generic.ICollection<UserGroup> UserGroups { get; set; }
-        public virtual System.Collections.Generic.ICollection<UserTablet> UserTablets { get; set; }
+        // Reverse navigation
+        public virtual System.Collections.Generic.ICollection<Role> Roles { get; set; } // Many to many mapping
+        public virtual System.Collections.Generic.ICollection<UserGroup> UserGroups { get; set; } // UserGroup.FK_dbo.UserGroup_dbo.User_UserId
+        public virtual System.Collections.Generic.ICollection<UserTablet> UserTablets { get; set; } // UserTablet.FK_dbo.UserTablet_dbo.User_UserId
 
         public User()
         {

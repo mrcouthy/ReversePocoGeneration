@@ -13,23 +13,25 @@
 namespace ReversePocoGenerationSample.Data
 {
 
+    // Group
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.22.1.0")]
     public partial class Group
     {
-        public int GroupId { get; set; }
-        public string Code { get; set; }
-        public string Name { get; set; }
-        public string CreatedBy { get; set; }
-        public System.DateTime? CreatedOn { get; set; }
-        public string ModifiedBy { get; set; }
-        public System.DateTime? ModifiedOn { get; set; }
-        public string DeletedBy { get; set; }
-        public System.DateTime? DeletedOn { get; set; }
-        public bool IsActive { get; set; }
-        public bool IsDeleted { get; set; }
+        public int GroupId { get; set; } // GroupId (Primary key)
+        public string Code { get; set; } // Code
+        public string Name { get; set; } // Name
+        public string CreatedBy { get; set; } // CreatedBy
+        public System.DateTime? CreatedOn { get; set; } // CreatedOn
+        public string ModifiedBy { get; set; } // ModifiedBy
+        public System.DateTime? ModifiedOn { get; set; } // ModifiedOn
+        public string DeletedBy { get; set; } // DeletedBy
+        public System.DateTime? DeletedOn { get; set; } // DeletedOn
+        public bool IsActive { get; set; } // IsActive
+        public bool IsDeleted { get; set; } // IsDeleted
 
-        public virtual System.Collections.Generic.ICollection<GroupSurvey> GroupSurveys { get; set; }
-        public virtual System.Collections.Generic.ICollection<UserGroup> UserGroups { get; set; }
+        // Reverse navigation
+        public virtual System.Collections.Generic.ICollection<GroupSurvey> GroupSurveys { get; set; } // GroupSurvey.FK_dbo.GroupSurvey_dbo.Group_GroupId
+        public virtual System.Collections.Generic.ICollection<UserGroup> UserGroups { get; set; } // UserGroup.FK_dbo.UserGroup_dbo.Group_GroupId
 
         public Group()
         {

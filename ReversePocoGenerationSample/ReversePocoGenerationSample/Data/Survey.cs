@@ -13,28 +13,31 @@
 namespace ReversePocoGenerationSample.Data
 {
 
+    // Survey
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.22.1.0")]
     public partial class Survey
     {
-        public int SurveyId { get; set; }
-        public string UniqueId { get; set; }
-        public string Name { get; set; }
-        public string Description { get; set; }
-        public string Logo { get; set; }
-        public int OrganizationId { get; set; }
-        public string CreatedBy { get; set; }
-        public System.DateTime? CreatedOn { get; set; }
-        public string ModifiedBy { get; set; }
-        public System.DateTime? ModifiedOn { get; set; }
-        public string DeletedBy { get; set; }
-        public System.DateTime? DeletedOn { get; set; }
-        public bool IsActive { get; set; }
-        public bool IsDeleted { get; set; }
+        public int SurveyId { get; set; } // SurveyId (Primary key)
+        public string UniqueId { get; set; } // UniqueId
+        public string Name { get; set; } // Name
+        public string Description { get; set; } // Description
+        public string Logo { get; set; } // Logo
+        public int OrganizationId { get; set; } // OrganizationId
+        public string CreatedBy { get; set; } // CreatedBy
+        public System.DateTime? CreatedOn { get; set; } // CreatedOn
+        public string ModifiedBy { get; set; } // ModifiedBy
+        public System.DateTime? ModifiedOn { get; set; } // ModifiedOn
+        public string DeletedBy { get; set; } // DeletedBy
+        public System.DateTime? DeletedOn { get; set; } // DeletedOn
+        public bool IsActive { get; set; } // IsActive
+        public bool IsDeleted { get; set; } // IsDeleted
 
-        public virtual System.Collections.Generic.ICollection<GroupSurvey> GroupSurveys { get; set; }
-        public virtual System.Collections.Generic.ICollection<SurveySection> SurveySections { get; set; }
+        // Reverse navigation
+        public virtual System.Collections.Generic.ICollection<GroupSurvey> GroupSurveys { get; set; } // GroupSurvey.FK_dbo.GroupSurvey_dbo.Survey_SurveyId
+        public virtual System.Collections.Generic.ICollection<SurveySection> SurveySections { get; set; } // SurveySection.FK_dbo.SurveySection_dbo.Survey_SurveyId
 
-        public virtual Organization Organization { get; set; }
+        // Foreign keys
+        public virtual Organization Organization { get; set; } // FK_dbo.Survey_dbo.Organization_OrganizationId
 
         public Survey()
         {

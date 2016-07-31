@@ -13,21 +13,23 @@
 namespace ReversePocoGenerationSample.Data
 {
 
+    // Role
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.22.1.0")]
     public partial class Role
     {
-        public int RoleId { get; set; }
-        public string RoleName { get; set; }
-        public string CreatedBy { get; set; }
-        public System.DateTime? CreatedOn { get; set; }
-        public string ModifiedBy { get; set; }
-        public System.DateTime? ModifiedOn { get; set; }
-        public string DeletedBy { get; set; }
-        public System.DateTime? DeletedOn { get; set; }
-        public bool IsActive { get; set; }
-        public bool IsDeleted { get; set; }
+        public int RoleId { get; set; } // RoleId (Primary key)
+        public string RoleName { get; set; } // RoleName
+        public string CreatedBy { get; set; } // CreatedBy
+        public System.DateTime? CreatedOn { get; set; } // CreatedOn
+        public string ModifiedBy { get; set; } // ModifiedBy
+        public System.DateTime? ModifiedOn { get; set; } // ModifiedOn
+        public string DeletedBy { get; set; } // DeletedBy
+        public System.DateTime? DeletedOn { get; set; } // DeletedOn
+        public bool IsActive { get; set; } // IsActive
+        public bool IsDeleted { get; set; } // IsDeleted
 
-        public virtual System.Collections.Generic.ICollection<User> Users { get; set; }
+        // Reverse navigation
+        public virtual System.Collections.Generic.ICollection<User> Users { get; set; } // Many to many mapping
 
         public Role()
         {

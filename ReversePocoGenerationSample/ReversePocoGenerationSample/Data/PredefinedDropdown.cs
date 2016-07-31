@@ -13,13 +13,14 @@
 namespace ReversePocoGenerationSample.Data
 {
 
+    // PredefinedDropdown
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.22.1.0")]
     public partial class PredefinedDropdown
     {
-        public int PredefinedDropdownId { get; set; }
-        public string Name { get; set; }
-        public string TableName { get; set; }
-        public string ColumnName { get; set; }
+        public int PredefinedDropdownId { get; set; } // PredefinedDropdownId (Primary key)
+        public string Name { get; set; } // Name
+        public string TableName { get; set; } // TableName
+        public string ColumnName { get; set; } // ColumnName
 
         public PredefinedDropdown()
         {

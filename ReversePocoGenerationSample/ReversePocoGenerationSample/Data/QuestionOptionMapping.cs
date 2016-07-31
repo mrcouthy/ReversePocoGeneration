@@ -13,6 +13,7 @@
 namespace ReversePocoGenerationSample.Data
 {
 
+    // QuestionOption
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.22.1.0")]
     public partial class QuestionOptionMapping : System.Data.Entity.ModelConfiguration.EntityTypeConfiguration<QuestionOption>
     {
@@ -33,7 +34,8 @@ namespace ReversePocoGenerationSample.Data
             Property(x => x.CreatedOn).HasColumnName(@"CreatedOn").IsOptional().HasColumnType("datetime");
             Property(x => x.ModifiedOn).HasColumnName(@"ModifiedOn").IsOptional().HasColumnType("datetime");
 
-            HasRequired(a => a.Question).WithMany(b => b.QuestionOptions).HasForeignKey(c => c.QuestionId);
+            // Foreign keys
+            HasRequired(a => a.Question).WithMany(b => b.QuestionOptions).HasForeignKey(c => c.QuestionId); // FK_dbo.QuestionOption_dbo.Question_QuestionId
             InitializePartial();
         }
         partial void InitializePartial();

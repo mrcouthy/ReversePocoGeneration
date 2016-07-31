@@ -13,27 +13,29 @@
 namespace ReversePocoGenerationSample.Data
 {
 
+    // Answer
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.22.1.0")]
     public partial class Answer
     {
-        public int AnswerId { get; set; }
-        public int? QuestionId { get; set; }
-        public int? QuestionOptionId { get; set; }
-        public string AnswerValue { get; set; }
-        public string CreatedBy { get; set; }
-        public System.DateTime CreatedOn { get; set; }
-        public string ModifiedBy { get; set; }
-        public System.DateTime? ModifiedOn { get; set; }
-        public string DeletedBy { get; set; }
-        public System.DateTime? DeletedOn { get; set; }
-        public bool? IsDeleted { get; set; }
-        public string Comment { get; set; }
-        public string SurveyeeGuid { get; set; }
-        public int? MatrixColId { get; set; }
-        public int? MatrixRowId { get; set; }
+        public int AnswerId { get; set; } // AnswerId (Primary key)
+        public int? QuestionId { get; set; } // QuestionId
+        public int? QuestionOptionId { get; set; } // QuestionOptionId
+        public string AnswerValue { get; set; } // AnswerValue
+        public string CreatedBy { get; set; } // CreatedBy
+        public System.DateTime CreatedOn { get; set; } // CreatedOn
+        public string ModifiedBy { get; set; } // ModifiedBy
+        public System.DateTime? ModifiedOn { get; set; } // ModifiedOn
+        public string DeletedBy { get; set; } // DeletedBy
+        public System.DateTime? DeletedOn { get; set; } // DeletedOn
+        public bool? IsDeleted { get; set; } // IsDeleted
+        public string Comment { get; set; } // Comment
+        public string SurveyeeGuid { get; set; } // SurveyeeGuid (length: 36)
+        public int? MatrixColId { get; set; } // MatrixColId
+        public int? MatrixRowId { get; set; } // MatrixRowId
 
-        public virtual Question Question { get; set; }
-        public virtual QuestionOption QuestionOption { get; set; }
+        // Foreign keys
+        public virtual Question Question { get; set; } // FK_Answer_Question
+        public virtual QuestionOption QuestionOption { get; set; } // FK_Answer_QuestionOption
 
         public Answer()
         {

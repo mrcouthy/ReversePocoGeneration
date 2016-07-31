@@ -13,6 +13,7 @@
 namespace ReversePocoGenerationSample.Data
 {
 
+    // Question
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.22.1.0")]
     public partial class QuestionMapping : System.Data.Entity.ModelConfiguration.EntityTypeConfiguration<Question>
     {
@@ -55,8 +56,9 @@ namespace ReversePocoGenerationSample.Data
             Property(x => x.IsDeleted).HasColumnName(@"IsDeleted").IsRequired().HasColumnType("bit");
             Property(x => x.IsUpdated).HasColumnName(@"IsUpdated").IsRequired().HasColumnType("bit");
 
-            HasRequired(a => a.QuestionType).WithMany(b => b.Questions).HasForeignKey(c => c.QuestionTypeId);
-            HasRequired(a => a.SurveySection).WithMany(b => b.Questions).HasForeignKey(c => c.SectionId);
+            // Foreign keys
+            HasRequired(a => a.QuestionType).WithMany(b => b.Questions).HasForeignKey(c => c.QuestionTypeId); // FK_dbo.Question_dbo.QuestionType_QuestionTypeId
+            HasRequired(a => a.SurveySection).WithMany(b => b.Questions).HasForeignKey(c => c.SectionId); // FK_dbo.Question_dbo.SurveySection_SectionId
             InitializePartial();
         }
         partial void InitializePartial();

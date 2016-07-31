@@ -13,6 +13,7 @@
 namespace ReversePocoGenerationSample.Data
 {
 
+    // Surveyee
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.22.1.0")]
     public partial class SurveyeeMapping : System.Data.Entity.ModelConfiguration.EntityTypeConfiguration<Surveyee>
     {
