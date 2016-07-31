@@ -71,7 +71,7 @@ namespace ReversePocoGenerationSample.Data
     #region Database context
 
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.22.1.0")]
-    public partial class TestDbContext : System.Data.Entity.DbContext, ITestDbContext
+    public partial class TestDbContext : CustomDbContext, ITestDbContext
     {
         public System.Data.Entity.DbSet<Answer> Answers { get; set; } // Answer
         public System.Data.Entity.DbSet<AnswerComment> AnswerComments { get; set; } // AnswerComment
