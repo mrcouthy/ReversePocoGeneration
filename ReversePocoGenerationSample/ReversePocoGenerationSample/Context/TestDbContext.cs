@@ -12,6 +12,9 @@
 
 namespace ReversePocoGenerationSample.Context
 {
+    using ReversePocoGenerationSample.Configuration;
+    using ReversePocoGenerationSample.Entities;
+    using ReversePocoGenerationSample.Interface;
     using System;
 
 

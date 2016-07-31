@@ -12,6 +12,8 @@
 
 namespace ReversePocoGenerationSample.Interface
 {
+    using Context;
+    using ReversePocoGenerationSample.Entities;
     using System;
 
     public interface ITestDbContext : System.IDisposable,ISaveChangesCount

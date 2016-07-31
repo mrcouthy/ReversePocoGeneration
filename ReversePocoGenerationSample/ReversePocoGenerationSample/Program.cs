@@ -1,4 +1,5 @@
-﻿using ReversePocoGenerationSample.Data;
+﻿using ReversePocoGenerationSample.Context;
+using ReversePocoGenerationSample.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;

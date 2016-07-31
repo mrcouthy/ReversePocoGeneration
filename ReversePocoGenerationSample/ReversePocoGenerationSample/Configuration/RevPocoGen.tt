@@ -106,10 +106,10 @@
     //      UnitOfWorkNamespace = "YourProject.Context";
     //      PocoConfigurationNamespace = "YourProject.Maps";
     // You also need to set the following to the namespace where they now live:
-    PocoNamespace = "";
-    ContextNamespace = "";
-    UnitOfWorkNamespace = "";
-    PocoConfigurationNamespace = "";
+    PocoNamespace = "ReversePocoGenerationSample.Entities";
+    ContextNamespace = "ReversePocoGenerationSample.Context";
+    UnitOfWorkNamespace = "ReversePocoGenerationSample.Interface";
+    PocoConfigurationNamespace = "ReversePocoGenerationSample.Configuration";
 
 
     // Schema *****************************************************************************************************************************

@@ -28,6 +28,8 @@
 
 namespace ReversePocoGenerationSample.Configuration
 {
+    using ReversePocoGenerationSample.Context;
+    using ReversePocoGenerationSample.Entities;
     using System;
 
 }

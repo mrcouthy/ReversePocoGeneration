@@ -101,7 +101,7 @@
     //      ElementsToGenerate = Elements.Poco; in your Entity folder,
     //      ElementsToGenerate = Elements.Context | Elements.UnitOfWork; in your Context folder,
     //      ElementsToGenerate = Elements.PocoConfiguration; in your Maps folder.
-    //      PocoNamespace = "YourProject.Entities";
+          PocoNamespace = "YourProject.Entities";
     //      ContextNamespace = "YourProject.Context";
     //      UnitOfWorkNamespace = "YourProject.Context";
     //      PocoConfigurationNamespace = "YourProject.Maps";

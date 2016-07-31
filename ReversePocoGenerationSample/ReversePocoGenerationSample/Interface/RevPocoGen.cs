@@ -28,6 +28,7 @@
 
 namespace ReversePocoGenerationSample.Interface
 {
+    using ReversePocoGenerationSample.Entities;
     using System;
 
 }
