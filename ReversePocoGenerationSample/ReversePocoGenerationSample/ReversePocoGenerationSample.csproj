@@ -65,12 +65,6 @@
     <Compile Include="Data\AnswerMapping.cs">
       <DependentUpon>RevPocoGen.tt</DependentUpon>
     </Compile>
-    <Compile Include="Data\FakeDbSet.cs">
-      <DependentUpon>RevPocoGen.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Data\FakeTestDbContext.cs">
-      <DependentUpon>RevPocoGen.tt</DependentUpon>
-    </Compile>
     <Compile Include="Data\Group.cs">
       <DependentUpon>RevPocoGen.tt</DependentUpon>
     </Compile>
