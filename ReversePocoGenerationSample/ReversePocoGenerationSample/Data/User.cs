@@ -38,7 +38,6 @@ namespace ReversePocoGenerationSample.Data
         public bool IsDeleted { get; set; } // IsDeleted
 
         // Reverse navigation
-        public virtual System.Collections.Generic.ICollection<Role> Roles { get; set; } // Many to many mapping
         public virtual System.Collections.Generic.ICollection<UserGroup> UserGroups { get; set; } // UserGroup.FK_dbo.UserGroup_dbo.User_UserId
         public virtual System.Collections.Generic.ICollection<UserTablet> UserTablets { get; set; } // UserTablet.FK_dbo.UserTablet_dbo.User_UserId
 
@@ -46,7 +45,6 @@ namespace ReversePocoGenerationSample.Data
         {
             UserGroups = new System.Collections.Generic.List<UserGroup>();
             UserTablets = new System.Collections.Generic.List<UserTablet>();
-            Roles = new System.Collections.Generic.List<Role>();
             InitializePartial();
         }
 

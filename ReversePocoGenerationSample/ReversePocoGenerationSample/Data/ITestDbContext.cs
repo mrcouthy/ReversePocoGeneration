@@ -30,7 +30,6 @@ namespace ReversePocoGenerationSample.Data
         System.Data.Entity.DbSet<Question> Questions { get; set; } // Question
         System.Data.Entity.DbSet<QuestionOption> QuestionOptions { get; set; } // QuestionOption
         System.Data.Entity.DbSet<QuestionType> QuestionTypes { get; set; } // QuestionType
-        System.Data.Entity.DbSet<Role> Roles { get; set; } // Role
         System.Data.Entity.DbSet<Rule> Rules { get; set; } // Rule
         System.Data.Entity.DbSet<Survey> Surveys { get; set; } // Survey
         System.Data.Entity.DbSet<SurveyComment> SurveyComments { get; set; } // SurveyComment

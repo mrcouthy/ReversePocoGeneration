@@ -32,7 +32,6 @@ namespace ReversePocoGenerationSample.Data
         public System.Data.Entity.DbSet<Question> Questions { get; set; } // Question
         public System.Data.Entity.DbSet<QuestionOption> QuestionOptions { get; set; } // QuestionOption
         public System.Data.Entity.DbSet<QuestionType> QuestionTypes { get; set; } // QuestionType
-        public System.Data.Entity.DbSet<Role> Roles { get; set; } // Role
         public System.Data.Entity.DbSet<Rule> Rules { get; set; } // Rule
         public System.Data.Entity.DbSet<Survey> Surveys { get; set; } // Survey
         public System.Data.Entity.DbSet<SurveyComment> SurveyComments { get; set; } // SurveyComment
@@ -112,7 +111,6 @@ namespace ReversePocoGenerationSample.Data
             modelBuilder.Configurations.Add(new QuestionMapping());
             modelBuilder.Configurations.Add(new QuestionOptionMapping());
             modelBuilder.Configurations.Add(new QuestionTypeMapping());
-            modelBuilder.Configurations.Add(new RoleMapping());
             modelBuilder.Configurations.Add(new RuleMapping());
             modelBuilder.Configurations.Add(new SurveyMapping());
             modelBuilder.Configurations.Add(new SurveyCommentMapping());
@@ -144,7 +142,6 @@ namespace ReversePocoGenerationSample.Data
             modelBuilder.Configurations.Add(new QuestionMapping(schema));
             modelBuilder.Configurations.Add(new QuestionOptionMapping(schema));
             modelBuilder.Configurations.Add(new QuestionTypeMapping(schema));
-            modelBuilder.Configurations.Add(new RoleMapping(schema));
             modelBuilder.Configurations.Add(new RuleMapping(schema));
             modelBuilder.Configurations.Add(new SurveyMapping(schema));
             modelBuilder.Configurations.Add(new SurveyCommentMapping(schema));

@@ -147,12 +147,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>RevPocoGen.tt</DependentUpon>
     </Compile>
-    <Compile Include="Data\Role.cs">
-      <DependentUpon>RevPocoGen.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Data\RoleMapping.cs">
-      <DependentUpon>RevPocoGen.tt</DependentUpon>
-    </Compile>
     <Compile Include="Data\Rule.cs">
       <DependentUpon>RevPocoGen.tt</DependentUpon>
     </Compile>
