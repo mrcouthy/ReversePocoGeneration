@@ -53,9 +53,176 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Data\Answer.cs">
+      <DependentUpon>RevPocoGen.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\AnswerComment.cs">
+      <DependentUpon>RevPocoGen.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\AnswerCommentMapping.cs">
+      <DependentUpon>RevPocoGen.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\AnswerMapping.cs">
+      <DependentUpon>RevPocoGen.tt</DependentUpon>
+    </Compile>
     <Compile Include="Data\CustomDbContext.cs" />
+    <Compile Include="Data\FakeDbSet.cs">
+      <DependentUpon>RevPocoGen.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\FakeTestDbContext.cs">
+      <DependentUpon>RevPocoGen.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Group.cs">
+      <DependentUpon>RevPocoGen.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\GroupMapping.cs">
+      <DependentUpon>RevPocoGen.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\GroupSurvey.cs">
+      <DependentUpon>RevPocoGen.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\GroupSurveyMapping.cs">
+      <DependentUpon>RevPocoGen.tt</DependentUpon>
+    </Compile>
     <Compile Include="Data\ISaveChangesCount.cs" />
-    <Compile Include="Data\TestDbContext.cs" />
+    <Compile Include="Data\ITestDbContext.cs">
+      <DependentUpon>RevPocoGen.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\MatrixCol.cs">
+      <DependentUpon>RevPocoGen.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\MatrixColMapping.cs">
+      <DependentUpon>RevPocoGen.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\MatrixRow.cs">
+      <DependentUpon>RevPocoGen.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\MatrixRowMapping.cs">
+      <DependentUpon>RevPocoGen.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\MenuItem.cs">
+      <DependentUpon>RevPocoGen.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\MenuItemMapping.cs">
+      <DependentUpon>RevPocoGen.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\OptionChoice.cs">
+      <DependentUpon>RevPocoGen.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\OptionChoiceMapping.cs">
+      <DependentUpon>RevPocoGen.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\OptionError.cs">
+      <DependentUpon>RevPocoGen.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\OptionErrorMapping.cs">
+      <DependentUpon>RevPocoGen.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Organization.cs">
+      <DependentUpon>RevPocoGen.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\OrganizationMapping.cs">
+      <DependentUpon>RevPocoGen.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\PredefinedDropdown.cs">
+      <DependentUpon>RevPocoGen.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\PredefinedDropdownMapping.cs">
+      <DependentUpon>RevPocoGen.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Question.cs">
+      <DependentUpon>RevPocoGen.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\QuestionMapping.cs">
+      <DependentUpon>RevPocoGen.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\QuestionOption.cs">
+      <DependentUpon>RevPocoGen.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\QuestionOptionMapping.cs">
+      <DependentUpon>RevPocoGen.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\QuestionType.cs">
+      <DependentUpon>RevPocoGen.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\QuestionTypeMapping.cs">
+      <DependentUpon>RevPocoGen.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Role.cs">
+      <DependentUpon>RevPocoGen.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\RoleMapping.cs">
+      <DependentUpon>RevPocoGen.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Rule.cs">
+      <DependentUpon>RevPocoGen.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\RuleMapping.cs">
+      <DependentUpon>RevPocoGen.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Survey.cs">
+      <DependentUpon>RevPocoGen.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\SurveyComment.cs">
+      <DependentUpon>RevPocoGen.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\SurveyCommentMapping.cs">
+      <DependentUpon>RevPocoGen.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Surveyee.cs">
+      <DependentUpon>RevPocoGen.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\SurveyeeMapping.cs">
+      <DependentUpon>RevPocoGen.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\SurveyeeSurveyComment.cs">
+      <DependentUpon>RevPocoGen.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\SurveyeeSurveyCommentMapping.cs">
+      <DependentUpon>RevPocoGen.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\SurveyMapping.cs">
+      <DependentUpon>RevPocoGen.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\SurveySection.cs">
+      <DependentUpon>RevPocoGen.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\SurveySectionMapping.cs">
+      <DependentUpon>RevPocoGen.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Sysdiagram.cs">
+      <DependentUpon>RevPocoGen.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\SysdiagramMapping.cs">
+      <DependentUpon>RevPocoGen.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Tablet.cs">
+      <DependentUpon>RevPocoGen.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\TabletMapping.cs">
+      <DependentUpon>RevPocoGen.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\TestDbContext.cs">
+      <DependentUpon>RevPocoGen.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\User.cs">
+      <DependentUpon>RevPocoGen.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\UserGroup.cs">
+      <DependentUpon>RevPocoGen.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\UserGroupMapping.cs">
+      <DependentUpon>RevPocoGen.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\UserMapping.cs">
+      <DependentUpon>RevPocoGen.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\UserTablet.cs">
+      <DependentUpon>RevPocoGen.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\UserTabletMapping.cs">
+      <DependentUpon>RevPocoGen.tt</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Data\RevPocoGen.cs">
