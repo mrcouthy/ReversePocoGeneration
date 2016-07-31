@@ -32,7 +32,7 @@ namespace ReversePocoGenerationSample.Data
 
     #region Unit of work
 
-    public interface ITestDbContext : System.IDisposable
+    public interface ITestDbContext : System.IDisposable,ISaveChangesCount
     {
         System.Data.Entity.DbSet<Answer> Answers { get; set; } // Answer
         System.Data.Entity.DbSet<AnswerComment> AnswerComments { get; set; } // AnswerComment
@@ -71,7 +71,7 @@ namespace ReversePocoGenerationSample.Data
     #region Database context
 
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.22.1.0")]
-    public class TestDbContext : System.Data.Entity.DbContext, ITestDbContext
+    public partial class TestDbContext : System.Data.Entity.DbContext, ITestDbContext
     {
         public System.Data.Entity.DbSet<Answer> Answers { get; set; } // Answer
         public System.Data.Entity.DbSet<AnswerComment> AnswerComments { get; set; } // AnswerComment
@@ -108,26 +108,31 @@ namespace ReversePocoGenerationSample.Data
         public TestDbContext()
             : base("Name=SurveydbContext")
         {
+            InitializePartial();
         }
 
         public TestDbContext(string connectionString)
             : base(connectionString)
         {
+            InitializePartial();
         }
 
         public TestDbContext(string connectionString, System.Data.Entity.Infrastructure.DbCompiledModel model)
             : base(connectionString, model)
         {
+            InitializePartial();
         }
 
         public TestDbContext(System.Data.Common.DbConnection existingConnection, bool contextOwnsConnection)
             : base(existingConnection, contextOwnsConnection)
         {
+            InitializePartial();
         }
 
         public TestDbContext(System.Data.Common.DbConnection existingConnection, System.Data.Entity.Infrastructure.DbCompiledModel model, bool contextOwnsConnection)
             : base(existingConnection, model, contextOwnsConnection)
         {
+            InitializePartial();
         }
 
         protected override void Dispose(bool disposing)
@@ -174,6 +179,8 @@ namespace ReversePocoGenerationSample.Data
             modelBuilder.Configurations.Add(new UserConfiguration());
             modelBuilder.Configurations.Add(new UserGroupConfiguration());
             modelBuilder.Configurations.Add(new UserTabletConfiguration());
+
+            OnModelCreatingPartial(modelBuilder);
         }
 
         public static System.Data.Entity.DbModelBuilder CreateModel(System.Data.Entity.DbModelBuilder modelBuilder, string schema)
@@ -206,13 +213,16 @@ namespace ReversePocoGenerationSample.Data
             modelBuilder.Configurations.Add(new UserTabletConfiguration(schema));
             return modelBuilder;
         }
+
+        partial void InitializePartial();
+        partial void OnModelCreatingPartial(System.Data.Entity.DbModelBuilder modelBuilder);
     }
     #endregion
 
     #region Fake Database context
 
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.22.1.0")]
-    public class FakeTestDbContext : ITestDbContext
+    public partial class FakeTestDbContext : ITestDbContext
     {
         public System.Data.Entity.DbSet<Answer> Answers { get; set; }
         public System.Data.Entity.DbSet<AnswerComment> AnswerComments { get; set; }
@@ -269,6 +279,8 @@ namespace ReversePocoGenerationSample.Data
             Users = new FakeDbSet<User>("UserId");
             UserGroups = new FakeDbSet<UserGroup>("UserGroupId");
             UserTablets = new FakeDbSet<UserTablet>("UserTabletId");
+
+            InitializePartial();
         }
 
         public int SaveChangesCount { get; private set; }
@@ -289,6 +301,8 @@ namespace ReversePocoGenerationSample.Data
             ++SaveChangesCount;
             return System.Threading.Tasks.Task<int>.Factory.StartNew(() => 1, cancellationToken);
         }
+
+        partial void InitializePartial();
 
         protected virtual void Dispose(bool disposing)
         {
@@ -318,7 +332,7 @@ namespace ReversePocoGenerationSample.Data
     //      }
     //      Read more about it here: https://msdn.microsoft.com/en-us/data/dn314431.aspx
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.22.1.0")]
-    public class FakeDbSet<TEntity> : System.Data.Entity.DbSet<TEntity>, IQueryable, System.Collections.Generic.IEnumerable<TEntity>, System.Data.Entity.Infrastructure.IDbAsyncEnumerable<TEntity> where TEntity : class
+    public partial class FakeDbSet<TEntity> : System.Data.Entity.DbSet<TEntity>, IQueryable, System.Collections.Generic.IEnumerable<TEntity>, System.Data.Entity.Infrastructure.IDbAsyncEnumerable<TEntity> where TEntity : class
     {
         private readonly System.Reflection.PropertyInfo[] _primaryKeys;
         private readonly System.Collections.ObjectModel.ObservableCollection<TEntity> _data;
@@ -328,6 +342,8 @@ namespace ReversePocoGenerationSample.Data
         {
             _data = new System.Collections.ObjectModel.ObservableCollection<TEntity>();
             _query = _data.AsQueryable();
+
+            InitializePartial();
         }
 
         public FakeDbSet(params string[] primaryKeys)
@@ -335,6 +351,8 @@ namespace ReversePocoGenerationSample.Data
             _primaryKeys = typeof(TEntity).GetProperties().Where(x => primaryKeys.Contains(x.Name)).ToArray();
             _data = new System.Collections.ObjectModel.ObservableCollection<TEntity>();
             _query = _data.AsQueryable();
+
+            InitializePartial();
         }
 
         public override TEntity Find(params object[] keyValues)
@@ -440,6 +458,8 @@ namespace ReversePocoGenerationSample.Data
         {
             return new FakeDbAsyncEnumerator<TEntity>(_data.GetEnumerator());
         }
+
+        partial void InitializePartial();
     }
 
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.22.1.0")]
@@ -547,7 +567,7 @@ namespace ReversePocoGenerationSample.Data
 
     // Answer
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.22.1.0")]
-    public class Answer
+    public partial class Answer
     {
         public int AnswerId { get; set; } // AnswerId (Primary key)
         public int? QuestionId { get; set; } // QuestionId
@@ -572,22 +592,32 @@ namespace ReversePocoGenerationSample.Data
         public Answer()
         {
             CreatedOn = System.DateTime.Now;
+            InitializePartial();
         }
+
+        partial void InitializePartial();
     }
 
     // AnswerComment
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.22.1.0")]
-    public class AnswerComment
+    public partial class AnswerComment
     {
         public int QuestionCommentId { get; set; } // QuestionCommentId (Primary key)
         public int? QuestionId { get; set; } // QuestionId
         public string Comment { get; set; } // Comment
         public string SurveyeeGuid { get; set; } // SurveyeeGuid (length: 36)
+
+        public AnswerComment()
+        {
+            InitializePartial();
+        }
+
+        partial void InitializePartial();
     }
 
     // Group
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.22.1.0")]
-    public class Group
+    public partial class Group
     {
         public int GroupId { get; set; } // GroupId (Primary key)
         public string Code { get; set; } // Code
@@ -609,12 +639,15 @@ namespace ReversePocoGenerationSample.Data
         {
             GroupSurveys = new System.Collections.Generic.List<GroupSurvey>();
             UserGroups = new System.Collections.Generic.List<UserGroup>();
+            InitializePartial();
         }
+
+        partial void InitializePartial();
     }
 
     // GroupSurvey
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.22.1.0")]
-    public class GroupSurvey
+    public partial class GroupSurvey
     {
         public int GroupSurveyId { get; set; } // GroupSurveyId (Primary key)
         public int GroupId { get; set; } // GroupId
@@ -631,11 +664,18 @@ namespace ReversePocoGenerationSample.Data
         // Foreign keys
         public virtual Group Group { get; set; } // FK_dbo.GroupSurvey_dbo.Group_GroupId
         public virtual Survey Survey { get; set; } // FK_dbo.GroupSurvey_dbo.Survey_SurveyId
+
+        public GroupSurvey()
+        {
+            InitializePartial();
+        }
+
+        partial void InitializePartial();
     }
 
     // MatrixCol
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.22.1.0")]
-    public class MatrixCol
+    public partial class MatrixCol
     {
         public int ColumnId { get; set; } // ColumnId (Primary key)
         public string ColumnLabel { get; set; } // ColumnLabel
@@ -645,11 +685,18 @@ namespace ReversePocoGenerationSample.Data
 
         // Foreign keys
         public virtual Question Question { get; set; } // FK_dbo.MatrixCol_dbo.Question_QuestionId
+
+        public MatrixCol()
+        {
+            InitializePartial();
+        }
+
+        partial void InitializePartial();
     }
 
     // MatrixRow
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.22.1.0")]
-    public class MatrixRow
+    public partial class MatrixRow
     {
         public int RowId { get; set; } // RowId (Primary key)
         public string RowLabel { get; set; } // RowLabel
@@ -659,11 +706,18 @@ namespace ReversePocoGenerationSample.Data
 
         // Foreign keys
         public virtual Question Question { get; set; } // FK_dbo.MatrixRow_dbo.Question_QuestionId
+
+        public MatrixRow()
+        {
+            InitializePartial();
+        }
+
+        partial void InitializePartial();
     }
 
     // MenuItem
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.22.1.0")]
-    public class MenuItem
+    public partial class MenuItem
     {
         public int Id { get; set; } // Id (Primary key)
         public string Action { get; set; } // Action
@@ -671,29 +725,50 @@ namespace ReversePocoGenerationSample.Data
         public string LinkText { get; set; } // LinkText
         public int ModuleId { get; set; } // ModuleId
         public int? ParentId { get; set; } // ParentId
+
+        public MenuItem()
+        {
+            InitializePartial();
+        }
+
+        partial void InitializePartial();
     }
 
     // OptionChoice
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.22.1.0")]
-    public class OptionChoice
+    public partial class OptionChoice
     {
         public int OptionChoiceId { get; set; } // OptionChoiceId (Primary key)
         public string OptionChoiceLabel { get; set; } // OptionChoiceLabel
         public bool IsDropdown { get; set; } // IsDropdown
+
+        public OptionChoice()
+        {
+            InitializePartial();
+        }
+
+        partial void InitializePartial();
     }
 
     // OptionError
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.22.1.0")]
-    public class OptionError
+    public partial class OptionError
     {
         public int OptionErrorId { get; set; } // OptionErrorId (Primary key)
         public int QuestionOptionId { get; set; } // QuestionOptionId
         public string ErrorText { get; set; } // ErrorText
+
+        public OptionError()
+        {
+            InitializePartial();
+        }
+
+        partial void InitializePartial();
     }
 
     // Organization
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.22.1.0")]
-    public class Organization
+    public partial class Organization
     {
         public int OrganizationId { get; set; } // OrganizationId (Primary key)
         public string Name { get; set; } // Name
@@ -713,22 +788,32 @@ namespace ReversePocoGenerationSample.Data
         public Organization()
         {
             Surveys = new System.Collections.Generic.List<Survey>();
+            InitializePartial();
         }
+
+        partial void InitializePartial();
     }
 
     // PredefinedDropdown
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.22.1.0")]
-    public class PredefinedDropdown
+    public partial class PredefinedDropdown
     {
         public int PredefinedDropdownId { get; set; } // PredefinedDropdownId (Primary key)
         public string Name { get; set; } // Name
         public string TableName { get; set; } // TableName
         public string ColumnName { get; set; } // ColumnName
+
+        public PredefinedDropdown()
+        {
+            InitializePartial();
+        }
+
+        partial void InitializePartial();
     }
 
     // Question
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.22.1.0")]
-    public class Question
+    public partial class Question
     {
         public int QuestionId { get; set; } // QuestionId (Primary key)
         public int PrecedingQuestionId { get; set; } // PrecedingQuestionId
@@ -775,12 +860,15 @@ namespace ReversePocoGenerationSample.Data
             MatrixCols = new System.Collections.Generic.List<MatrixCol>();
             MatrixRows = new System.Collections.Generic.List<MatrixRow>();
             QuestionOptions = new System.Collections.Generic.List<QuestionOption>();
+            InitializePartial();
         }
+
+        partial void InitializePartial();
     }
 
     // QuestionOption
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.22.1.0")]
-    public class QuestionOption
+    public partial class QuestionOption
     {
         public int QuestionOptionId { get; set; } // QuestionOptionId (Primary key)
         public string OptionChoiceLabel { get; set; } // OptionChoiceLabel
@@ -798,12 +886,15 @@ namespace ReversePocoGenerationSample.Data
         public QuestionOption()
         {
             Answers = new System.Collections.Generic.List<Answer>();
+            InitializePartial();
         }
+
+        partial void InitializePartial();
     }
 
     // QuestionType
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.22.1.0")]
-    public class QuestionType
+    public partial class QuestionType
     {
         public int QuestionTypeId { get; set; } // QuestionTypeId (Primary key)
         public string Type { get; set; } // Type
@@ -814,12 +905,15 @@ namespace ReversePocoGenerationSample.Data
         public QuestionType()
         {
             Questions = new System.Collections.Generic.List<Question>();
+            InitializePartial();
         }
+
+        partial void InitializePartial();
     }
 
     // Role
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.22.1.0")]
-    public class Role
+    public partial class Role
     {
         public int RoleId { get; set; } // RoleId (Primary key)
         public string RoleName { get; set; } // RoleName
@@ -838,21 +932,31 @@ namespace ReversePocoGenerationSample.Data
         public Role()
         {
             Users = new System.Collections.Generic.List<User>();
+            InitializePartial();
         }
+
+        partial void InitializePartial();
     }
 
     // Rule
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.22.1.0")]
-    public class Rule
+    public partial class Rule
     {
         public int RuleId { get; set; } // RuleId (Primary key)
         public string Name { get; set; } // Name
         public string Description { get; set; } // Description
+
+        public Rule()
+        {
+            InitializePartial();
+        }
+
+        partial void InitializePartial();
     }
 
     // Survey
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.22.1.0")]
-    public class Survey
+    public partial class Survey
     {
         public int SurveyId { get; set; } // SurveyId (Primary key)
         public string UniqueId { get; set; } // UniqueId
@@ -880,12 +984,15 @@ namespace ReversePocoGenerationSample.Data
         {
             GroupSurveys = new System.Collections.Generic.List<GroupSurvey>();
             SurveySections = new System.Collections.Generic.List<SurveySection>();
+            InitializePartial();
         }
+
+        partial void InitializePartial();
     }
 
     // SurveyComment
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.22.1.0")]
-    public class SurveyComment
+    public partial class SurveyComment
     {
         public int SurveyCommentsId { get; set; } // SurveyCommentsId (Primary key)
         public string SurveyeeGuid { get; set; } // SurveyeeGuid (length: 36)
@@ -893,11 +1000,18 @@ namespace ReversePocoGenerationSample.Data
         public string Comment { get; set; } // Comment
         public string Status { get; set; } // Status (length: 10)
         public System.DateTime? Date { get; set; } // Date
+
+        public SurveyComment()
+        {
+            InitializePartial();
+        }
+
+        partial void InitializePartial();
     }
 
     // Surveyee
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.22.1.0")]
-    public class Surveyee
+    public partial class Surveyee
     {
         public string Title { get; set; } // Title
         public string Code { get; set; } // Code
@@ -914,22 +1028,32 @@ namespace ReversePocoGenerationSample.Data
         public Surveyee()
         {
             CreatedOn = System.DateTime.Now;
+            InitializePartial();
         }
+
+        partial void InitializePartial();
     }
 
     // SurveyeeSurveyComment
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.22.1.0")]
-    public class SurveyeeSurveyComment
+    public partial class SurveyeeSurveyComment
     {
         public int CommentId { get; set; } // CommentId (Primary key)
         public int SurveyeeId { get; set; } // SurveyeeId
         public int SurveyId { get; set; } // SurveyId
         public string Comment { get; set; } // Comment
+
+        public SurveyeeSurveyComment()
+        {
+            InitializePartial();
+        }
+
+        partial void InitializePartial();
     }
 
     // SurveySection
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.22.1.0")]
-    public class SurveySection
+    public partial class SurveySection
     {
         public int SectionId { get; set; } // SectionId (Primary key)
         public string Code { get; set; } // Code
@@ -954,23 +1078,33 @@ namespace ReversePocoGenerationSample.Data
         public SurveySection()
         {
             Questions = new System.Collections.Generic.List<Question>();
+            InitializePartial();
         }
+
+        partial void InitializePartial();
     }
 
     // sysdiagrams
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.22.1.0")]
-    public class Sysdiagram
+    public partial class Sysdiagram
     {
         public string Name { get; set; } // name (length: 128)
         public int PrincipalId { get; set; } // principal_id
         public int DiagramId { get; set; } // diagram_id (Primary key)
         public int? Version { get; set; } // version
         public byte[] Definition { get; set; } // definition
+
+        public Sysdiagram()
+        {
+            InitializePartial();
+        }
+
+        partial void InitializePartial();
     }
 
     // Tablet
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.22.1.0")]
-    public class Tablet
+    public partial class Tablet
     {
         public int TabletId { get; set; } // TabletId (Primary key)
         public string Code { get; set; } // Code
@@ -991,12 +1125,15 @@ namespace ReversePocoGenerationSample.Data
         public Tablet()
         {
             UserTablets = new System.Collections.Generic.List<UserTablet>();
+            InitializePartial();
         }
+
+        partial void InitializePartial();
     }
 
     // User
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.22.1.0")]
-    public class User
+    public partial class User
     {
         public int UserId { get; set; } // UserId (Primary key)
         public string FirstName { get; set; } // FirstName
@@ -1027,12 +1164,15 @@ namespace ReversePocoGenerationSample.Data
             UserGroups = new System.Collections.Generic.List<UserGroup>();
             UserTablets = new System.Collections.Generic.List<UserTablet>();
             Roles = new System.Collections.Generic.List<Role>();
+            InitializePartial();
         }
+
+        partial void InitializePartial();
     }
 
     // UserGroup
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.22.1.0")]
-    public class UserGroup
+    public partial class UserGroup
     {
         public int UserGroupId { get; set; } // UserGroupId (Primary key)
         public int UserId { get; set; } // UserId
@@ -1050,11 +1190,18 @@ namespace ReversePocoGenerationSample.Data
         // Foreign keys
         public virtual Group Group { get; set; } // FK_dbo.UserGroup_dbo.Group_GroupId
         public virtual User User { get; set; } // FK_dbo.UserGroup_dbo.User_UserId
+
+        public UserGroup()
+        {
+            InitializePartial();
+        }
+
+        partial void InitializePartial();
     }
 
     // UserTablet
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.22.1.0")]
-    public class UserTablet
+    public partial class UserTablet
     {
         public int UserTabletId { get; set; } // UserTabletId (Primary key)
         public int UserId { get; set; } // UserId
@@ -1071,6 +1218,13 @@ namespace ReversePocoGenerationSample.Data
         // Foreign keys
         public virtual Tablet Tablet { get; set; } // FK_dbo.UserTablet_dbo.Tablet_TabletId
         public virtual User User { get; set; } // FK_dbo.UserTablet_dbo.User_UserId
+
+        public UserTablet()
+        {
+            InitializePartial();
+        }
+
+        partial void InitializePartial();
     }
 
     #endregion
@@ -1079,7 +1233,7 @@ namespace ReversePocoGenerationSample.Data
 
     // Answer
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.22.1.0")]
-    public class AnswerConfiguration : System.Data.Entity.ModelConfiguration.EntityTypeConfiguration<Answer>
+    public partial class AnswerConfiguration : System.Data.Entity.ModelConfiguration.EntityTypeConfiguration<Answer>
     {
         public AnswerConfiguration()
             : this("dbo")
@@ -1110,12 +1264,14 @@ namespace ReversePocoGenerationSample.Data
             // Foreign keys
             HasOptional(a => a.Question).WithMany(b => b.Answers).HasForeignKey(c => c.QuestionId).WillCascadeOnDelete(false); // FK_Answer_Question
             HasOptional(a => a.QuestionOption).WithMany(b => b.Answers).HasForeignKey(c => c.QuestionOptionId).WillCascadeOnDelete(false); // FK_Answer_QuestionOption
+            InitializePartial();
         }
+        partial void InitializePartial();
     }
 
     // AnswerComment
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.22.1.0")]
-    public class AnswerCommentConfiguration : System.Data.Entity.ModelConfiguration.EntityTypeConfiguration<AnswerComment>
+    public partial class AnswerCommentConfiguration : System.Data.Entity.ModelConfiguration.EntityTypeConfiguration<AnswerComment>
     {
         public AnswerCommentConfiguration()
             : this("dbo")
@@ -1131,12 +1287,14 @@ namespace ReversePocoGenerationSample.Data
             Property(x => x.QuestionId).HasColumnName(@"QuestionId").IsOptional().HasColumnType("int");
             Property(x => x.Comment).HasColumnName(@"Comment").IsOptional().HasColumnType("nvarchar");
             Property(x => x.SurveyeeGuid).HasColumnName(@"SurveyeeGuid").IsRequired().IsFixedLength().IsUnicode(false).HasColumnType("char").HasMaxLength(36);
+            InitializePartial();
         }
+        partial void InitializePartial();
     }
 
     // Group
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.22.1.0")]
-    public class GroupConfiguration : System.Data.Entity.ModelConfiguration.EntityTypeConfiguration<Group>
+    public partial class GroupConfiguration : System.Data.Entity.ModelConfiguration.EntityTypeConfiguration<Group>
     {
         public GroupConfiguration()
             : this("dbo")
@@ -1159,12 +1317,14 @@ namespace ReversePocoGenerationSample.Data
             Property(x => x.DeletedOn).HasColumnName(@"DeletedOn").IsOptional().HasColumnType("datetime");
             Property(x => x.IsActive).HasColumnName(@"IsActive").IsRequired().HasColumnType("bit");
             Property(x => x.IsDeleted).HasColumnName(@"IsDeleted").IsRequired().HasColumnType("bit");
+            InitializePartial();
         }
+        partial void InitializePartial();
     }
 
     // GroupSurvey
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.22.1.0")]
-    public class GroupSurveyConfiguration : System.Data.Entity.ModelConfiguration.EntityTypeConfiguration<GroupSurvey>
+    public partial class GroupSurveyConfiguration : System.Data.Entity.ModelConfiguration.EntityTypeConfiguration<GroupSurvey>
     {
         public GroupSurveyConfiguration()
             : this("dbo")
@@ -1191,12 +1351,14 @@ namespace ReversePocoGenerationSample.Data
             // Foreign keys
             HasRequired(a => a.Group).WithMany(b => b.GroupSurveys).HasForeignKey(c => c.GroupId); // FK_dbo.GroupSurvey_dbo.Group_GroupId
             HasRequired(a => a.Survey).WithMany(b => b.GroupSurveys).HasForeignKey(c => c.SurveyId); // FK_dbo.GroupSurvey_dbo.Survey_SurveyId
+            InitializePartial();
         }
+        partial void InitializePartial();
     }
 
     // MatrixCol
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.22.1.0")]
-    public class MatrixColConfiguration : System.Data.Entity.ModelConfiguration.EntityTypeConfiguration<MatrixCol>
+    public partial class MatrixColConfiguration : System.Data.Entity.ModelConfiguration.EntityTypeConfiguration<MatrixCol>
     {
         public MatrixColConfiguration()
             : this("dbo")
@@ -1216,12 +1378,14 @@ namespace ReversePocoGenerationSample.Data
 
             // Foreign keys
             HasRequired(a => a.Question).WithMany(b => b.MatrixCols).HasForeignKey(c => c.QuestionId); // FK_dbo.MatrixCol_dbo.Question_QuestionId
+            InitializePartial();
         }
+        partial void InitializePartial();
     }
 
     // MatrixRow
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.22.1.0")]
-    public class MatrixRowConfiguration : System.Data.Entity.ModelConfiguration.EntityTypeConfiguration<MatrixRow>
+    public partial class MatrixRowConfiguration : System.Data.Entity.ModelConfiguration.EntityTypeConfiguration<MatrixRow>
     {
         public MatrixRowConfiguration()
             : this("dbo")
@@ -1241,12 +1405,14 @@ namespace ReversePocoGenerationSample.Data
 
             // Foreign keys
             HasRequired(a => a.Question).WithMany(b => b.MatrixRows).HasForeignKey(c => c.QuestionId); // FK_dbo.MatrixRow_dbo.Question_QuestionId
+            InitializePartial();
         }
+        partial void InitializePartial();
     }
 
     // MenuItem
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.22.1.0")]
-    public class MenuItemConfiguration : System.Data.Entity.ModelConfiguration.EntityTypeConfiguration<MenuItem>
+    public partial class MenuItemConfiguration : System.Data.Entity.ModelConfiguration.EntityTypeConfiguration<MenuItem>
     {
         public MenuItemConfiguration()
             : this("dbo")
@@ -1264,12 +1430,14 @@ namespace ReversePocoGenerationSample.Data
             Property(x => x.LinkText).HasColumnName(@"LinkText").IsOptional().HasColumnType("nvarchar");
             Property(x => x.ModuleId).HasColumnName(@"ModuleId").IsRequired().HasColumnType("int");
             Property(x => x.ParentId).HasColumnName(@"ParentId").IsOptional().HasColumnType("int");
+            InitializePartial();
         }
+        partial void InitializePartial();
     }
 
     // OptionChoice
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.22.1.0")]
-    public class OptionChoiceConfiguration : System.Data.Entity.ModelConfiguration.EntityTypeConfiguration<OptionChoice>
+    public partial class OptionChoiceConfiguration : System.Data.Entity.ModelConfiguration.EntityTypeConfiguration<OptionChoice>
     {
         public OptionChoiceConfiguration()
             : this("dbo")
@@ -1284,12 +1452,14 @@ namespace ReversePocoGenerationSample.Data
             Property(x => x.OptionChoiceId).HasColumnName(@"OptionChoiceId").IsRequired().HasColumnType("int").HasDatabaseGeneratedOption(System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedOption.Identity);
             Property(x => x.OptionChoiceLabel).HasColumnName(@"OptionChoiceLabel").IsOptional().HasColumnType("nvarchar");
             Property(x => x.IsDropdown).HasColumnName(@"IsDropdown").IsRequired().HasColumnType("bit");
+            InitializePartial();
         }
+        partial void InitializePartial();
     }
 
     // OptionError
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.22.1.0")]
-    public class OptionErrorConfiguration : System.Data.Entity.ModelConfiguration.EntityTypeConfiguration<OptionError>
+    public partial class OptionErrorConfiguration : System.Data.Entity.ModelConfiguration.EntityTypeConfiguration<OptionError>
     {
         public OptionErrorConfiguration()
             : this("dbo")
@@ -1304,12 +1474,14 @@ namespace ReversePocoGenerationSample.Data
             Property(x => x.OptionErrorId).HasColumnName(@"OptionErrorId").IsRequired().HasColumnType("int").HasDatabaseGeneratedOption(System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedOption.Identity);
             Property(x => x.QuestionOptionId).HasColumnName(@"QuestionOptionId").IsRequired().HasColumnType("int");
             Property(x => x.ErrorText).HasColumnName(@"ErrorText").IsOptional().HasColumnType("nvarchar");
+            InitializePartial();
         }
+        partial void InitializePartial();
     }
 
     // Organization
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.22.1.0")]
-    public class OrganizationConfiguration : System.Data.Entity.ModelConfiguration.EntityTypeConfiguration<Organization>
+    public partial class OrganizationConfiguration : System.Data.Entity.ModelConfiguration.EntityTypeConfiguration<Organization>
     {
         public OrganizationConfiguration()
             : this("dbo")
@@ -1332,12 +1504,14 @@ namespace ReversePocoGenerationSample.Data
             Property(x => x.DeletedOn).HasColumnName(@"DeletedOn").IsOptional().HasColumnType("datetime");
             Property(x => x.IsActive).HasColumnName(@"IsActive").IsRequired().HasColumnType("bit");
             Property(x => x.IsDeleted).HasColumnName(@"IsDeleted").IsRequired().HasColumnType("bit");
+            InitializePartial();
         }
+        partial void InitializePartial();
     }
 
     // PredefinedDropdown
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.22.1.0")]
-    public class PredefinedDropdownConfiguration : System.Data.Entity.ModelConfiguration.EntityTypeConfiguration<PredefinedDropdown>
+    public partial class PredefinedDropdownConfiguration : System.Data.Entity.ModelConfiguration.EntityTypeConfiguration<PredefinedDropdown>
     {
         public PredefinedDropdownConfiguration()
             : this("dbo")
@@ -1353,12 +1527,14 @@ namespace ReversePocoGenerationSample.Data
             Property(x => x.Name).HasColumnName(@"Name").IsOptional().HasColumnType("nvarchar");
             Property(x => x.TableName).HasColumnName(@"TableName").IsOptional().HasColumnType("nvarchar");
             Property(x => x.ColumnName).HasColumnName(@"ColumnName").IsOptional().HasColumnType("nvarchar");
+            InitializePartial();
         }
+        partial void InitializePartial();
     }
 
     // Question
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.22.1.0")]
-    public class QuestionConfiguration : System.Data.Entity.ModelConfiguration.EntityTypeConfiguration<Question>
+    public partial class QuestionConfiguration : System.Data.Entity.ModelConfiguration.EntityTypeConfiguration<Question>
     {
         public QuestionConfiguration()
             : this("dbo")
@@ -1402,12 +1578,14 @@ namespace ReversePocoGenerationSample.Data
             // Foreign keys
             HasRequired(a => a.QuestionType).WithMany(b => b.Questions).HasForeignKey(c => c.QuestionTypeId); // FK_dbo.Question_dbo.QuestionType_QuestionTypeId
             HasRequired(a => a.SurveySection).WithMany(b => b.Questions).HasForeignKey(c => c.SectionId); // FK_dbo.Question_dbo.SurveySection_SectionId
+            InitializePartial();
         }
+        partial void InitializePartial();
     }
 
     // QuestionOption
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.22.1.0")]
-    public class QuestionOptionConfiguration : System.Data.Entity.ModelConfiguration.EntityTypeConfiguration<QuestionOption>
+    public partial class QuestionOptionConfiguration : System.Data.Entity.ModelConfiguration.EntityTypeConfiguration<QuestionOption>
     {
         public QuestionOptionConfiguration()
             : this("dbo")
@@ -1428,12 +1606,14 @@ namespace ReversePocoGenerationSample.Data
 
             // Foreign keys
             HasRequired(a => a.Question).WithMany(b => b.QuestionOptions).HasForeignKey(c => c.QuestionId); // FK_dbo.QuestionOption_dbo.Question_QuestionId
+            InitializePartial();
         }
+        partial void InitializePartial();
     }
 
     // QuestionType
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.22.1.0")]
-    public class QuestionTypeConfiguration : System.Data.Entity.ModelConfiguration.EntityTypeConfiguration<QuestionType>
+    public partial class QuestionTypeConfiguration : System.Data.Entity.ModelConfiguration.EntityTypeConfiguration<QuestionType>
     {
         public QuestionTypeConfiguration()
             : this("dbo")
@@ -1447,12 +1627,14 @@ namespace ReversePocoGenerationSample.Data
 
             Property(x => x.QuestionTypeId).HasColumnName(@"QuestionTypeId").IsRequired().HasColumnType("int").HasDatabaseGeneratedOption(System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedOption.Identity);
             Property(x => x.Type).HasColumnName(@"Type").IsOptional().HasColumnType("nvarchar");
+            InitializePartial();
         }
+        partial void InitializePartial();
     }
 
     // Role
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.22.1.0")]
-    public class RoleConfiguration : System.Data.Entity.ModelConfiguration.EntityTypeConfiguration<Role>
+    public partial class RoleConfiguration : System.Data.Entity.ModelConfiguration.EntityTypeConfiguration<Role>
     {
         public RoleConfiguration()
             : this("dbo")
@@ -1480,12 +1662,14 @@ namespace ReversePocoGenerationSample.Data
                 m.MapLeftKey("RoleId");
                 m.MapRightKey("UserId");
             });
+            InitializePartial();
         }
+        partial void InitializePartial();
     }
 
     // Rule
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.22.1.0")]
-    public class RuleConfiguration : System.Data.Entity.ModelConfiguration.EntityTypeConfiguration<Rule>
+    public partial class RuleConfiguration : System.Data.Entity.ModelConfiguration.EntityTypeConfiguration<Rule>
     {
         public RuleConfiguration()
             : this("dbo")
@@ -1500,12 +1684,14 @@ namespace ReversePocoGenerationSample.Data
             Property(x => x.RuleId).HasColumnName(@"RuleId").IsRequired().HasColumnType("int").HasDatabaseGeneratedOption(System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedOption.Identity);
             Property(x => x.Name).HasColumnName(@"Name").IsOptional().HasColumnType("nvarchar");
             Property(x => x.Description).HasColumnName(@"Description").IsOptional().HasColumnType("nvarchar");
+            InitializePartial();
         }
+        partial void InitializePartial();
     }
 
     // Survey
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.22.1.0")]
-    public class SurveyConfiguration : System.Data.Entity.ModelConfiguration.EntityTypeConfiguration<Survey>
+    public partial class SurveyConfiguration : System.Data.Entity.ModelConfiguration.EntityTypeConfiguration<Survey>
     {
         public SurveyConfiguration()
             : this("dbo")
@@ -1534,12 +1720,14 @@ namespace ReversePocoGenerationSample.Data
 
             // Foreign keys
             HasRequired(a => a.Organization).WithMany(b => b.Surveys).HasForeignKey(c => c.OrganizationId); // FK_dbo.Survey_dbo.Organization_OrganizationId
+            InitializePartial();
         }
+        partial void InitializePartial();
     }
 
     // SurveyComment
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.22.1.0")]
-    public class SurveyCommentConfiguration : System.Data.Entity.ModelConfiguration.EntityTypeConfiguration<SurveyComment>
+    public partial class SurveyCommentConfiguration : System.Data.Entity.ModelConfiguration.EntityTypeConfiguration<SurveyComment>
     {
         public SurveyCommentConfiguration()
             : this("dbo")
@@ -1557,12 +1745,14 @@ namespace ReversePocoGenerationSample.Data
             Property(x => x.Comment).HasColumnName(@"Comment").IsRequired().IsUnicode(false).HasColumnType("varchar");
             Property(x => x.Status).HasColumnName(@"Status").IsOptional().IsFixedLength().HasColumnType("nchar").HasMaxLength(10);
             Property(x => x.Date).HasColumnName(@"Date").IsOptional().HasColumnType("datetime");
+            InitializePartial();
         }
+        partial void InitializePartial();
     }
 
     // Surveyee
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.22.1.0")]
-    public class SurveyeeConfiguration : System.Data.Entity.ModelConfiguration.EntityTypeConfiguration<Surveyee>
+    public partial class SurveyeeConfiguration : System.Data.Entity.ModelConfiguration.EntityTypeConfiguration<Surveyee>
     {
         public SurveyeeConfiguration()
             : this("dbo")
@@ -1585,12 +1775,14 @@ namespace ReversePocoGenerationSample.Data
             Property(x => x.DeletedBy).HasColumnName(@"DeletedBy").IsOptional().HasColumnType("int");
             Property(x => x.Status).HasColumnName(@"Status").IsOptional().IsFixedLength().HasColumnType("nchar").HasMaxLength(10);
             Property(x => x.SurveyeeGuid).HasColumnName(@"SurveyeeGuid").IsRequired().IsFixedLength().IsUnicode(false).HasColumnType("char").HasMaxLength(36).HasDatabaseGeneratedOption(System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedOption.None);
+            InitializePartial();
         }
+        partial void InitializePartial();
     }
 
     // SurveyeeSurveyComment
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.22.1.0")]
-    public class SurveyeeSurveyCommentConfiguration : System.Data.Entity.ModelConfiguration.EntityTypeConfiguration<SurveyeeSurveyComment>
+    public partial class SurveyeeSurveyCommentConfiguration : System.Data.Entity.ModelConfiguration.EntityTypeConfiguration<SurveyeeSurveyComment>
     {
         public SurveyeeSurveyCommentConfiguration()
             : this("dbo")
@@ -1606,12 +1798,14 @@ namespace ReversePocoGenerationSample.Data
             Property(x => x.SurveyeeId).HasColumnName(@"SurveyeeId").IsRequired().HasColumnType("int");
             Property(x => x.SurveyId).HasColumnName(@"SurveyId").IsRequired().HasColumnType("int");
             Property(x => x.Comment).HasColumnName(@"Comment").IsRequired().HasColumnType("nvarchar");
+            InitializePartial();
         }
+        partial void InitializePartial();
     }
 
     // SurveySection
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.22.1.0")]
-    public class SurveySectionConfiguration : System.Data.Entity.ModelConfiguration.EntityTypeConfiguration<SurveySection>
+    public partial class SurveySectionConfiguration : System.Data.Entity.ModelConfiguration.EntityTypeConfiguration<SurveySection>
     {
         public SurveySectionConfiguration()
             : this("dbo")
@@ -1639,12 +1833,14 @@ namespace ReversePocoGenerationSample.Data
 
             // Foreign keys
             HasRequired(a => a.Survey).WithMany(b => b.SurveySections).HasForeignKey(c => c.SurveyId); // FK_dbo.SurveySection_dbo.Survey_SurveyId
+            InitializePartial();
         }
+        partial void InitializePartial();
     }
 
     // sysdiagrams
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.22.1.0")]
-    public class SysdiagramConfiguration : System.Data.Entity.ModelConfiguration.EntityTypeConfiguration<Sysdiagram>
+    public partial class SysdiagramConfiguration : System.Data.Entity.ModelConfiguration.EntityTypeConfiguration<Sysdiagram>
     {
         public SysdiagramConfiguration()
             : this("dbo")
@@ -1661,12 +1857,14 @@ namespace ReversePocoGenerationSample.Data
             Property(x => x.DiagramId).HasColumnName(@"diagram_id").IsRequired().HasColumnType("int").HasDatabaseGeneratedOption(System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedOption.Identity);
             Property(x => x.Version).HasColumnName(@"version").IsOptional().HasColumnType("int");
             Property(x => x.Definition).HasColumnName(@"definition").IsOptional().HasColumnType("varbinary");
+            InitializePartial();
         }
+        partial void InitializePartial();
     }
 
     // Tablet
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.22.1.0")]
-    public class TabletConfiguration : System.Data.Entity.ModelConfiguration.EntityTypeConfiguration<Tablet>
+    public partial class TabletConfiguration : System.Data.Entity.ModelConfiguration.EntityTypeConfiguration<Tablet>
     {
         public TabletConfiguration()
             : this("dbo")
@@ -1690,12 +1888,14 @@ namespace ReversePocoGenerationSample.Data
             Property(x => x.DeletedOn).HasColumnName(@"DeletedOn").IsOptional().HasColumnType("datetime");
             Property(x => x.IsActive).HasColumnName(@"IsActive").IsRequired().HasColumnType("bit");
             Property(x => x.IsDeleted).HasColumnName(@"IsDeleted").IsRequired().HasColumnType("bit");
+            InitializePartial();
         }
+        partial void InitializePartial();
     }
 
     // User
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.22.1.0")]
-    public class UserConfiguration : System.Data.Entity.ModelConfiguration.EntityTypeConfiguration<User>
+    public partial class UserConfiguration : System.Data.Entity.ModelConfiguration.EntityTypeConfiguration<User>
     {
         public UserConfiguration()
             : this("dbo")
@@ -1725,12 +1925,14 @@ namespace ReversePocoGenerationSample.Data
             Property(x => x.DeletedOn).HasColumnName(@"DeletedOn").IsOptional().HasColumnType("datetime");
             Property(x => x.IsActive).HasColumnName(@"IsActive").IsRequired().HasColumnType("bit");
             Property(x => x.IsDeleted).HasColumnName(@"IsDeleted").IsRequired().HasColumnType("bit");
+            InitializePartial();
         }
+        partial void InitializePartial();
     }
 
     // UserGroup
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.22.1.0")]
-    public class UserGroupConfiguration : System.Data.Entity.ModelConfiguration.EntityTypeConfiguration<UserGroup>
+    public partial class UserGroupConfiguration : System.Data.Entity.ModelConfiguration.EntityTypeConfiguration<UserGroup>
     {
         public UserGroupConfiguration()
             : this("dbo")
@@ -1758,12 +1960,14 @@ namespace ReversePocoGenerationSample.Data
             // Foreign keys
             HasRequired(a => a.Group).WithMany(b => b.UserGroups).HasForeignKey(c => c.GroupId); // FK_dbo.UserGroup_dbo.Group_GroupId
             HasRequired(a => a.User).WithMany(b => b.UserGroups).HasForeignKey(c => c.UserId); // FK_dbo.UserGroup_dbo.User_UserId
+            InitializePartial();
         }
+        partial void InitializePartial();
     }
 
     // UserTablet
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.22.1.0")]
-    public class UserTabletConfiguration : System.Data.Entity.ModelConfiguration.EntityTypeConfiguration<UserTablet>
+    public partial class UserTabletConfiguration : System.Data.Entity.ModelConfiguration.EntityTypeConfiguration<UserTablet>
     {
         public UserTabletConfiguration()
             : this("dbo")
@@ -1790,7 +1994,9 @@ namespace ReversePocoGenerationSample.Data
             // Foreign keys
             HasRequired(a => a.Tablet).WithMany(b => b.UserTablets).HasForeignKey(c => c.TabletId); // FK_dbo.UserTablet_dbo.Tablet_TabletId
             HasRequired(a => a.User).WithMany(b => b.UserTablets).HasForeignKey(c => c.UserId); // FK_dbo.UserTablet_dbo.User_UserId
+            InitializePartial();
         }
+        partial void InitializePartial();
     }
 
     #endregion
