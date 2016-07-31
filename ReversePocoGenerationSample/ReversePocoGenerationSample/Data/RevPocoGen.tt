@@ -1,4 +1,4 @@
-﻿<#@ include file="EF.Reverse.POCO.Core.ttinclude" #>
+﻿<#@ include file="..\EF.Reverse.POCO.Core.ttinclude" #>
 <#
     // v2.22.1
     // Please make changes to the settings below.
@@ -8,7 +8,7 @@
     // Main settings **********************************************************************************************************************
     ConnectionStringName = "SurveydbContext";   // Searches for this connection string in config files listed below in the ConfigFilenameSearchOrder setting
     //ConnectionStringName is the only required setting
-    Namespace = "Hello"; // Override the default namespace here
+    // Namespace = "Hello"; // Override the default namespace here
     DbContextName = "MyDbContext";
     //DbContextInterfaceName = "IMyDbContext"; //Defaults to "I" + DbContextName
     DbContextInterfaceBaseClasses = "System.IDisposable";    // Specify what the base classes are for your database context interface
@@ -500,6 +500,6 @@
     if (tables.Count > 0 || storedProcs.Count > 0)
     {
 #>
-<#@ include file="EF.Reverse.POCO.ttinclude" #>
+<#@ include file="..\EF.Reverse.POCO.ttinclude" #>
 <#@ import namespace="System.Xml.Schema" #>
 <# } #>
