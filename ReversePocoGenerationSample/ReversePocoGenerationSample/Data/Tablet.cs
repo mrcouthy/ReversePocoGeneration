@@ -35,7 +35,7 @@ namespace ReversePocoGenerationSample.Data
 
         public Tablet()
         {
-            UserTablets = new yyy<UserTablet>();
+            UserTablets = new System.Collections.Generic.List<UserTablet>();
             InitializePartial();
         }
 

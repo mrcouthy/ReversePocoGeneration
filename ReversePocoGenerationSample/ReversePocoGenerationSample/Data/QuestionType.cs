@@ -25,7 +25,7 @@ namespace ReversePocoGenerationSample.Data
 
         public QuestionType()
         {
-            Questions = new yyy<Question>();
+            Questions = new System.Collections.Generic.List<Question>();
             InitializePartial();
         }
 

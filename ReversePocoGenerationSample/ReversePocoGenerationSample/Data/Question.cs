@@ -58,10 +58,10 @@ namespace ReversePocoGenerationSample.Data
 
         public Question()
         {
-            Answers = new yyy<Answer>();
-            MatrixCols = new yyy<MatrixCol>();
-            MatrixRows = new yyy<MatrixRow>();
-            QuestionOptions = new yyy<QuestionOption>();
+            Answers = new System.Collections.Generic.List<Answer>();
+            MatrixCols = new System.Collections.Generic.List<MatrixCol>();
+            MatrixRows = new System.Collections.Generic.List<MatrixRow>();
+            QuestionOptions = new System.Collections.Generic.List<QuestionOption>();
             InitializePartial();
         }
 

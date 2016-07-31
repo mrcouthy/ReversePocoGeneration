@@ -32,7 +32,7 @@ namespace ReversePocoGenerationSample.Data
 
         public QuestionOption()
         {
-            Answers = new yyy<Answer>();
+            Answers = new System.Collections.Generic.List<Answer>();
             InitializePartial();
         }
 

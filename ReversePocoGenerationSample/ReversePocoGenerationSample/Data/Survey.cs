@@ -41,8 +41,8 @@ namespace ReversePocoGenerationSample.Data
 
         public Survey()
         {
-            GroupSurveys = new yyy<GroupSurvey>();
-            SurveySections = new yyy<SurveySection>();
+            GroupSurveys = new System.Collections.Generic.List<GroupSurvey>();
+            SurveySections = new System.Collections.Generic.List<SurveySection>();
             InitializePartial();
         }
 

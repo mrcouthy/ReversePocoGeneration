@@ -34,7 +34,7 @@ namespace ReversePocoGenerationSample.Data
 
         public Organization()
         {
-            Surveys = new yyy<Survey>();
+            Surveys = new System.Collections.Generic.List<Survey>();
             InitializePartial();
         }
 

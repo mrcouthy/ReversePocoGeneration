@@ -33,7 +33,7 @@ namespace ReversePocoGenerationSample.Data
 
         public Role()
         {
-            Users = new yyy<User>();
+            Users = new System.Collections.Generic.List<User>();
             InitializePartial();
         }
 
