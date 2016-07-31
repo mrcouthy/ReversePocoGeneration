@@ -53,6 +53,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Data\CustomDbContext.cs" />
     <Compile Include="Data\ISaveChangesCount.cs" />
     <Compile Include="Data\TestDbContext.cs" />
     <Compile Include="Program.cs" />

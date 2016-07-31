@@ -12,7 +12,7 @@
     DbContextName = "TestDbContext";
     //DbContextInterfaceName = "IMyDbContext"; //Defaults to "I" + DbContextName
     DbContextInterfaceBaseClasses = "System.IDisposable,ISaveChangesCount";    // Specify what the base classes are for your database context interface
-    DbContextBaseClass = "System.Data.Entity.DbContext";   // Specify what the base class is for your DbContext. For ASP.NET Identity use "IdentityDbContext<ApplicationUser>"
+    DbContextBaseClass = "CustomDbContext";   // Specify what the base class is for your DbContext. For ASP.NET Identity use "IdentityDbContext<ApplicationUser>"
     //DefaultConstructorArgument = "EnvironmentConnectionStrings.MyDbContext"; //defaults to "Name=" + ConnectionStringName
     TargetFrameworkVersion = "4.51"; // Please set this to your .NET framework version, 4.0, 4.5, 4.51, etc.
     ConfigurationClassName = "Configuration"; // Configuration, Mapping, Map, etc. This is appended to the Poco class name to configure the mappings.
