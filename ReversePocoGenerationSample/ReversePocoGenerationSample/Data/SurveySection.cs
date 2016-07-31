@@ -17,19 +17,71 @@ namespace ReversePocoGenerationSample.Data
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.22.1.0")]
     public partial class SurveySection
     {
-        public int SectionId { get; set; } // SectionId (Primary key)
-        public string Code { get; set; } // Code
-        public string Title { get; set; } // Title
-        public string Description { get; set; } // Description
-        public int SurveyId { get; set; } // SurveyId
-        public string CreatedBy { get; set; } // CreatedBy
-        public System.DateTime? CreatedOn { get; set; } // CreatedOn
-        public string ModifiedBy { get; set; } // ModifiedBy
-        public System.DateTime? ModifiedOn { get; set; } // ModifiedOn
-        public string DeletedBy { get; set; } // DeletedBy
-        public System.DateTime? DeletedOn { get; set; } // DeletedOn
-        public bool IsActive { get; set; } // IsActive
-        public bool IsDeleted { get; set; } // IsDeleted
+
+        ///<summary>
+        /// SectionId (Primary key)
+        ///</summary>
+        public int SectionId { get; set; }
+
+        ///<summary>
+        /// Code
+        ///</summary>
+        public string Code { get; set; }
+
+        ///<summary>
+        /// Title
+        ///</summary>
+        public string Title { get; set; }
+
+        ///<summary>
+        /// Description
+        ///</summary>
+        public string Description { get; set; }
+
+        ///<summary>
+        /// SurveyId
+        ///</summary>
+        public int SurveyId { get; set; }
+
+        ///<summary>
+        /// CreatedBy
+        ///</summary>
+        public string CreatedBy { get; set; }
+
+        ///<summary>
+        /// CreatedOn
+        ///</summary>
+        public System.DateTime? CreatedOn { get; set; }
+
+        ///<summary>
+        /// ModifiedBy
+        ///</summary>
+        public string ModifiedBy { get; set; }
+
+        ///<summary>
+        /// ModifiedOn
+        ///</summary>
+        public System.DateTime? ModifiedOn { get; set; }
+
+        ///<summary>
+        /// DeletedBy
+        ///</summary>
+        public string DeletedBy { get; set; }
+
+        ///<summary>
+        /// DeletedOn
+        ///</summary>
+        public System.DateTime? DeletedOn { get; set; }
+
+        ///<summary>
+        /// IsActive
+        ///</summary>
+        public bool IsActive { get; set; }
+
+        ///<summary>
+        /// IsDeleted
+        ///</summary>
+        public bool IsDeleted { get; set; }
 
         // Reverse navigation
         public virtual System.Collections.Generic.ICollection<Question> Questions { get; set; } // Question.FK_dbo.Question_dbo.SurveySection_SectionId

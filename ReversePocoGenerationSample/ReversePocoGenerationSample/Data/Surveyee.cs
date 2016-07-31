@@ -17,17 +17,61 @@ namespace ReversePocoGenerationSample.Data
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.22.1.0")]
     public partial class Surveyee
     {
-        public string Title { get; set; } // Title
-        public string Code { get; set; } // Code
-        public string Description { get; set; } // Description
-        public System.DateTime CreatedOn { get; set; } // CreatedOn
-        public System.DateTime? ModifiedOn { get; set; } // ModifiedOn
-        public System.DateTime? DeletedOn { get; set; } // DeletedOn
-        public int? CreatedBy { get; set; } // CreatedBy
-        public int? ModifiedBy { get; set; } // ModifiedBy
-        public int? DeletedBy { get; set; } // DeletedBy
-        public string Status { get; set; } // Status (length: 10)
-        public string SurveyeeGuid { get; set; } // SurveyeeGuid (Primary key) (length: 36)
+
+        ///<summary>
+        /// Title
+        ///</summary>
+        public string Title { get; set; }
+
+        ///<summary>
+        /// Code
+        ///</summary>
+        public string Code { get; set; }
+
+        ///<summary>
+        /// Description
+        ///</summary>
+        public string Description { get; set; }
+
+        ///<summary>
+        /// CreatedOn
+        ///</summary>
+        public System.DateTime CreatedOn { get; set; }
+
+        ///<summary>
+        /// ModifiedOn
+        ///</summary>
+        public System.DateTime? ModifiedOn { get; set; }
+
+        ///<summary>
+        /// DeletedOn
+        ///</summary>
+        public System.DateTime? DeletedOn { get; set; }
+
+        ///<summary>
+        /// CreatedBy
+        ///</summary>
+        public int? CreatedBy { get; set; }
+
+        ///<summary>
+        /// ModifiedBy
+        ///</summary>
+        public int? ModifiedBy { get; set; }
+
+        ///<summary>
+        /// DeletedBy
+        ///</summary>
+        public int? DeletedBy { get; set; }
+
+        ///<summary>
+        /// Status (length: 10)
+        ///</summary>
+        public string Status { get; set; }
+
+        ///<summary>
+        /// SurveyeeGuid (Primary key) (length: 36)
+        ///</summary>
+        public string SurveyeeGuid { get; set; }
 
         public Surveyee()
         {

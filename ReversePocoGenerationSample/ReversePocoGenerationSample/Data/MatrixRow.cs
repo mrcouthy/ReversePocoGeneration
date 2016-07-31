@@ -17,11 +17,31 @@ namespace ReversePocoGenerationSample.Data
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.22.1.0")]
     public partial class MatrixRow
     {
-        public int RowId { get; set; } // RowId (Primary key)
-        public string RowLabel { get; set; } // RowLabel
-        public int QuestionId { get; set; } // QuestionId
-        public System.DateTime? CreatedOn { get; set; } // CreatedOn
-        public System.DateTime? ModifiedOn { get; set; } // ModifiedOn
+
+        ///<summary>
+        /// RowId (Primary key)
+        ///</summary>
+        public int RowId { get; set; }
+
+        ///<summary>
+        /// RowLabel
+        ///</summary>
+        public string RowLabel { get; set; }
+
+        ///<summary>
+        /// QuestionId
+        ///</summary>
+        public int QuestionId { get; set; }
+
+        ///<summary>
+        /// CreatedOn
+        ///</summary>
+        public System.DateTime? CreatedOn { get; set; }
+
+        ///<summary>
+        /// ModifiedOn
+        ///</summary>
+        public System.DateTime? ModifiedOn { get; set; }
 
         // Foreign keys
         public virtual Question Question { get; set; } // FK_dbo.MatrixRow_dbo.Question_QuestionId

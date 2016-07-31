@@ -17,21 +17,81 @@ namespace ReversePocoGenerationSample.Data
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.22.1.0")]
     public partial class Answer
     {
-        public int AnswerId { get; set; } // AnswerId (Primary key)
-        public int? QuestionId { get; set; } // QuestionId
-        public int? QuestionOptionId { get; set; } // QuestionOptionId
-        public string AnswerValue { get; set; } // AnswerValue
-        public string CreatedBy { get; set; } // CreatedBy
-        public System.DateTime CreatedOn { get; set; } // CreatedOn
-        public string ModifiedBy { get; set; } // ModifiedBy
-        public System.DateTime? ModifiedOn { get; set; } // ModifiedOn
-        public string DeletedBy { get; set; } // DeletedBy
-        public System.DateTime? DeletedOn { get; set; } // DeletedOn
-        public bool? IsDeleted { get; set; } // IsDeleted
-        public string Comment { get; set; } // Comment
-        public string SurveyeeGuid { get; set; } // SurveyeeGuid (length: 36)
-        public int? MatrixColId { get; set; } // MatrixColId
-        public int? MatrixRowId { get; set; } // MatrixRowId
+
+        ///<summary>
+        /// AnswerId (Primary key)
+        ///</summary>
+        public int AnswerId { get; set; }
+
+        ///<summary>
+        /// QuestionId
+        ///</summary>
+        public int? QuestionId { get; set; }
+
+        ///<summary>
+        /// QuestionOptionId
+        ///</summary>
+        public int? QuestionOptionId { get; set; }
+
+        ///<summary>
+        /// AnswerValue
+        ///</summary>
+        public string AnswerValue { get; set; }
+
+        ///<summary>
+        /// CreatedBy
+        ///</summary>
+        public string CreatedBy { get; set; }
+
+        ///<summary>
+        /// CreatedOn
+        ///</summary>
+        public System.DateTime CreatedOn { get; set; }
+
+        ///<summary>
+        /// ModifiedBy
+        ///</summary>
+        public string ModifiedBy { get; set; }
+
+        ///<summary>
+        /// ModifiedOn
+        ///</summary>
+        public System.DateTime? ModifiedOn { get; set; }
+
+        ///<summary>
+        /// DeletedBy
+        ///</summary>
+        public string DeletedBy { get; set; }
+
+        ///<summary>
+        /// DeletedOn
+        ///</summary>
+        public System.DateTime? DeletedOn { get; set; }
+
+        ///<summary>
+        /// IsDeleted
+        ///</summary>
+        public bool? IsDeleted { get; set; }
+
+        ///<summary>
+        /// Comment
+        ///</summary>
+        public string Comment { get; set; }
+
+        ///<summary>
+        /// SurveyeeGuid (length: 36)
+        ///</summary>
+        public string SurveyeeGuid { get; set; }
+
+        ///<summary>
+        /// MatrixColId
+        ///</summary>
+        public int? MatrixColId { get; set; }
+
+        ///<summary>
+        /// MatrixRowId
+        ///</summary>
+        public int? MatrixRowId { get; set; }
 
         // Foreign keys
         public virtual Question Question { get; set; } // FK_Answer_Question

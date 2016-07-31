@@ -17,9 +17,21 @@ namespace ReversePocoGenerationSample.Data
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.22.1.0")]
     public partial class OptionError
     {
-        public int OptionErrorId { get; set; } // OptionErrorId (Primary key)
-        public int QuestionOptionId { get; set; } // QuestionOptionId
-        public string ErrorText { get; set; } // ErrorText
+
+        ///<summary>
+        /// OptionErrorId (Primary key)
+        ///</summary>
+        public int OptionErrorId { get; set; }
+
+        ///<summary>
+        /// QuestionOptionId
+        ///</summary>
+        public int QuestionOptionId { get; set; }
+
+        ///<summary>
+        /// ErrorText
+        ///</summary>
+        public string ErrorText { get; set; }
 
         public OptionError()
         {

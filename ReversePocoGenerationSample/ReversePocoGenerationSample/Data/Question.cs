@@ -17,34 +17,146 @@ namespace ReversePocoGenerationSample.Data
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.22.1.0")]
     public partial class Question
     {
-        public int QuestionId { get; set; } // QuestionId (Primary key)
-        public int PrecedingQuestionId { get; set; } // PrecedingQuestionId
-        public string Code { get; set; } // Code
-        public string QuestionText { get; set; } // QuestionText
-        public bool Required { get; set; } // Required
-        public bool OnlyNumericValue { get; set; } // OnlyNumericValue
-        public bool IncludeComment { get; set; } // IncludeComment
-        public string Comment { get; set; } // Comment
-        public int QuestionOrder { get; set; } // QuestionOrder
-        public int DependentQuestionId { get; set; } // DependentQuestionId
-        public int DependentQuestionOptionId { get; set; } // DependentQuestionOptionId
-        public bool AllowMultipleChoice { get; set; } // AllowMultipleChoice
-        public int JumpQuestionId { get; set; } // JumpQuestionId
-        public int JumpQuestionOptionId { get; set; } // JumpQuestionOptionId
-        public bool HasPredefinedDropdown { get; set; } // HasPredefinedDropdown
-        public int PredefinedDropdownId { get; set; } // PredefinedDropdownId
-        public int SectionId { get; set; } // SectionId
-        public int QuestionTypeId { get; set; } // QuestionTypeId
-        public int RuleId { get; set; } // RuleId
-        public string CreatedBy { get; set; } // CreatedBy
-        public System.DateTime? CreatedOn { get; set; } // CreatedOn
-        public string ModifiedBy { get; set; } // ModifiedBy
-        public System.DateTime? ModifiedOn { get; set; } // ModifiedOn
-        public string DeletedBy { get; set; } // DeletedBy
-        public System.DateTime? DeletedOn { get; set; } // DeletedOn
-        public bool IsActive { get; set; } // IsActive
-        public bool IsDeleted { get; set; } // IsDeleted
-        public bool IsUpdated { get; set; } // IsUpdated
+
+        ///<summary>
+        /// QuestionId (Primary key)
+        ///</summary>
+        public int QuestionId { get; set; }
+
+        ///<summary>
+        /// PrecedingQuestionId
+        ///</summary>
+        public int PrecedingQuestionId { get; set; }
+
+        ///<summary>
+        /// Code
+        ///</summary>
+        public string Code { get; set; }
+
+        ///<summary>
+        /// QuestionText
+        ///</summary>
+        public string QuestionText { get; set; }
+
+        ///<summary>
+        /// Required
+        ///</summary>
+        public bool Required { get; set; }
+
+        ///<summary>
+        /// OnlyNumericValue
+        ///</summary>
+        public bool OnlyNumericValue { get; set; }
+
+        ///<summary>
+        /// IncludeComment
+        ///</summary>
+        public bool IncludeComment { get; set; }
+
+        ///<summary>
+        /// Comment
+        ///</summary>
+        public string Comment { get; set; }
+
+        ///<summary>
+        /// QuestionOrder
+        ///</summary>
+        public int QuestionOrder { get; set; }
+
+        ///<summary>
+        /// DependentQuestionId
+        ///</summary>
+        public int DependentQuestionId { get; set; }
+
+        ///<summary>
+        /// DependentQuestionOptionId
+        ///</summary>
+        public int DependentQuestionOptionId { get; set; }
+
+        ///<summary>
+        /// AllowMultipleChoice
+        ///</summary>
+        public bool AllowMultipleChoice { get; set; }
+
+        ///<summary>
+        /// JumpQuestionId
+        ///</summary>
+        public int JumpQuestionId { get; set; }
+
+        ///<summary>
+        /// JumpQuestionOptionId
+        ///</summary>
+        public int JumpQuestionOptionId { get; set; }
+
+        ///<summary>
+        /// HasPredefinedDropdown
+        ///</summary>
+        public bool HasPredefinedDropdown { get; set; }
+
+        ///<summary>
+        /// PredefinedDropdownId
+        ///</summary>
+        public int PredefinedDropdownId { get; set; }
+
+        ///<summary>
+        /// SectionId
+        ///</summary>
+        public int SectionId { get; set; }
+
+        ///<summary>
+        /// QuestionTypeId
+        ///</summary>
+        public int QuestionTypeId { get; set; }
+
+        ///<summary>
+        /// RuleId
+        ///</summary>
+        public int RuleId { get; set; }
+
+        ///<summary>
+        /// CreatedBy
+        ///</summary>
+        public string CreatedBy { get; set; }
+
+        ///<summary>
+        /// CreatedOn
+        ///</summary>
+        public System.DateTime? CreatedOn { get; set; }
+
+        ///<summary>
+        /// ModifiedBy
+        ///</summary>
+        public string ModifiedBy { get; set; }
+
+        ///<summary>
+        /// ModifiedOn
+        ///</summary>
+        public System.DateTime? ModifiedOn { get; set; }
+
+        ///<summary>
+        /// DeletedBy
+        ///</summary>
+        public string DeletedBy { get; set; }
+
+        ///<summary>
+        /// DeletedOn
+        ///</summary>
+        public System.DateTime? DeletedOn { get; set; }
+
+        ///<summary>
+        /// IsActive
+        ///</summary>
+        public bool IsActive { get; set; }
+
+        ///<summary>
+        /// IsDeleted
+        ///</summary>
+        public bool IsDeleted { get; set; }
+
+        ///<summary>
+        /// IsUpdated
+        ///</summary>
+        public bool IsUpdated { get; set; }
 
         // Reverse navigation
         public virtual System.Collections.Generic.ICollection<Answer> Answers { get; set; } // Answer.FK_Answer_Question

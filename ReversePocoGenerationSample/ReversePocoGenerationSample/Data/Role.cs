@@ -17,16 +17,56 @@ namespace ReversePocoGenerationSample.Data
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.22.1.0")]
     public partial class Role
     {
-        public int RoleId { get; set; } // RoleId (Primary key)
-        public string RoleName { get; set; } // RoleName
-        public string CreatedBy { get; set; } // CreatedBy
-        public System.DateTime? CreatedOn { get; set; } // CreatedOn
-        public string ModifiedBy { get; set; } // ModifiedBy
-        public System.DateTime? ModifiedOn { get; set; } // ModifiedOn
-        public string DeletedBy { get; set; } // DeletedBy
-        public System.DateTime? DeletedOn { get; set; } // DeletedOn
-        public bool IsActive { get; set; } // IsActive
-        public bool IsDeleted { get; set; } // IsDeleted
+
+        ///<summary>
+        /// RoleId (Primary key)
+        ///</summary>
+        public int RoleId { get; set; }
+
+        ///<summary>
+        /// RoleName
+        ///</summary>
+        public string RoleName { get; set; }
+
+        ///<summary>
+        /// CreatedBy
+        ///</summary>
+        public string CreatedBy { get; set; }
+
+        ///<summary>
+        /// CreatedOn
+        ///</summary>
+        public System.DateTime? CreatedOn { get; set; }
+
+        ///<summary>
+        /// ModifiedBy
+        ///</summary>
+        public string ModifiedBy { get; set; }
+
+        ///<summary>
+        /// ModifiedOn
+        ///</summary>
+        public System.DateTime? ModifiedOn { get; set; }
+
+        ///<summary>
+        /// DeletedBy
+        ///</summary>
+        public string DeletedBy { get; set; }
+
+        ///<summary>
+        /// DeletedOn
+        ///</summary>
+        public System.DateTime? DeletedOn { get; set; }
+
+        ///<summary>
+        /// IsActive
+        ///</summary>
+        public bool IsActive { get; set; }
+
+        ///<summary>
+        /// IsDeleted
+        ///</summary>
+        public bool IsDeleted { get; set; }
 
         // Reverse navigation
         public virtual System.Collections.Generic.ICollection<User> Users { get; set; } // Many to many mapping

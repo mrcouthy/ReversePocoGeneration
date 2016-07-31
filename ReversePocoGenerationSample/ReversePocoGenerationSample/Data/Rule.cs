@@ -17,9 +17,21 @@ namespace ReversePocoGenerationSample.Data
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.22.1.0")]
     public partial class Rule
     {
-        public int RuleId { get; set; } // RuleId (Primary key)
-        public string Name { get; set; } // Name
-        public string Description { get; set; } // Description
+
+        ///<summary>
+        /// RuleId (Primary key)
+        ///</summary>
+        public int RuleId { get; set; }
+
+        ///<summary>
+        /// Name
+        ///</summary>
+        public string Name { get; set; }
+
+        ///<summary>
+        /// Description
+        ///</summary>
+        public string Description { get; set; }
 
         public Rule()
         {

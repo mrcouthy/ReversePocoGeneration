@@ -17,17 +17,61 @@ namespace ReversePocoGenerationSample.Data
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.22.1.0")]
     public partial class GroupSurvey
     {
-        public int GroupSurveyId { get; set; } // GroupSurveyId (Primary key)
-        public int GroupId { get; set; } // GroupId
-        public int SurveyId { get; set; } // SurveyId
-        public string CreatedBy { get; set; } // CreatedBy
-        public System.DateTime? CreatedOn { get; set; } // CreatedOn
-        public string ModifiedBy { get; set; } // ModifiedBy
-        public System.DateTime? ModifiedOn { get; set; } // ModifiedOn
-        public string DeletedBy { get; set; } // DeletedBy
-        public System.DateTime? DeletedOn { get; set; } // DeletedOn
-        public bool IsActive { get; set; } // IsActive
-        public bool IsDeleted { get; set; } // IsDeleted
+
+        ///<summary>
+        /// GroupSurveyId (Primary key)
+        ///</summary>
+        public int GroupSurveyId { get; set; }
+
+        ///<summary>
+        /// GroupId
+        ///</summary>
+        public int GroupId { get; set; }
+
+        ///<summary>
+        /// SurveyId
+        ///</summary>
+        public int SurveyId { get; set; }
+
+        ///<summary>
+        /// CreatedBy
+        ///</summary>
+        public string CreatedBy { get; set; }
+
+        ///<summary>
+        /// CreatedOn
+        ///</summary>
+        public System.DateTime? CreatedOn { get; set; }
+
+        ///<summary>
+        /// ModifiedBy
+        ///</summary>
+        public string ModifiedBy { get; set; }
+
+        ///<summary>
+        /// ModifiedOn
+        ///</summary>
+        public System.DateTime? ModifiedOn { get; set; }
+
+        ///<summary>
+        /// DeletedBy
+        ///</summary>
+        public string DeletedBy { get; set; }
+
+        ///<summary>
+        /// DeletedOn
+        ///</summary>
+        public System.DateTime? DeletedOn { get; set; }
+
+        ///<summary>
+        /// IsActive
+        ///</summary>
+        public bool IsActive { get; set; }
+
+        ///<summary>
+        /// IsDeleted
+        ///</summary>
+        public bool IsDeleted { get; set; }
 
         // Foreign keys
         public virtual Group Group { get; set; } // FK_dbo.GroupSurvey_dbo.Group_GroupId

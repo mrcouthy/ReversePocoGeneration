@@ -17,11 +17,31 @@ namespace ReversePocoGenerationSample.Data
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.22.1.0")]
     public partial class Sysdiagram
     {
-        public string Name { get; set; } // name (length: 128)
-        public int PrincipalId { get; set; } // principal_id
-        public int DiagramId { get; set; } // diagram_id (Primary key)
-        public int? Version { get; set; } // version
-        public byte[] Definition { get; set; } // definition
+
+        ///<summary>
+        /// name (length: 128)
+        ///</summary>
+        public string Name { get; set; }
+
+        ///<summary>
+        /// principal_id
+        ///</summary>
+        public int PrincipalId { get; set; }
+
+        ///<summary>
+        /// diagram_id (Primary key)
+        ///</summary>
+        public int DiagramId { get; set; }
+
+        ///<summary>
+        /// version
+        ///</summary>
+        public int? Version { get; set; }
+
+        ///<summary>
+        /// definition
+        ///</summary>
+        public byte[] Definition { get; set; }
 
         public Sysdiagram()
         {

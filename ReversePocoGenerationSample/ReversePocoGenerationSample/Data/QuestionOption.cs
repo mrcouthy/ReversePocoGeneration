@@ -17,12 +17,36 @@ namespace ReversePocoGenerationSample.Data
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.22.1.0")]
     public partial class QuestionOption
     {
-        public int QuestionOptionId { get; set; } // QuestionOptionId (Primary key)
-        public string OptionChoiceLabel { get; set; } // OptionChoiceLabel
-        public bool IsDropdown { get; set; } // IsDropdown
-        public int QuestionId { get; set; } // QuestionId
-        public System.DateTime? CreatedOn { get; set; } // CreatedOn
-        public System.DateTime? ModifiedOn { get; set; } // ModifiedOn
+
+        ///<summary>
+        /// QuestionOptionId (Primary key)
+        ///</summary>
+        public int QuestionOptionId { get; set; }
+
+        ///<summary>
+        /// OptionChoiceLabel
+        ///</summary>
+        public string OptionChoiceLabel { get; set; }
+
+        ///<summary>
+        /// IsDropdown
+        ///</summary>
+        public bool IsDropdown { get; set; }
+
+        ///<summary>
+        /// QuestionId
+        ///</summary>
+        public int QuestionId { get; set; }
+
+        ///<summary>
+        /// CreatedOn
+        ///</summary>
+        public System.DateTime? CreatedOn { get; set; }
+
+        ///<summary>
+        /// ModifiedOn
+        ///</summary>
+        public System.DateTime? ModifiedOn { get; set; }
 
         // Reverse navigation
         public virtual System.Collections.Generic.ICollection<Answer> Answers { get; set; } // Answer.FK_Answer_QuestionOption
