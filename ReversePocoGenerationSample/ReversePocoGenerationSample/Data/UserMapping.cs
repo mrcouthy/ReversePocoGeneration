@@ -12,6 +12,7 @@
 
 namespace ReversePocoGenerationSample.Data
 {
+    using System;
 
     // User
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.22.1.0")]

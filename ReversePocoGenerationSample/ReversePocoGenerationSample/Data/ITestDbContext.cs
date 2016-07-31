@@ -12,6 +12,7 @@
 
 namespace ReversePocoGenerationSample.Data
 {
+    using System;
 
     public interface ITestDbContext : System.IDisposable,ISaveChangesCount
     {

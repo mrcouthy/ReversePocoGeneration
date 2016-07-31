@@ -28,6 +28,7 @@
 
 namespace ReversePocoGenerationSample.Data
 {
+    using System;
 
 }
 // </auto-generated>
