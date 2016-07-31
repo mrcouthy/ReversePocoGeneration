@@ -35,8 +35,8 @@ namespace ReversePocoGenerationSample.Data
 
         public Group()
         {
-            GroupSurveys = new System.Collections.Generic.List<GroupSurvey>();
-            UserGroups = new System.Collections.Generic.List<UserGroup>();
+            GroupSurveys = new yyy<GroupSurvey>();
+            UserGroups = new yyy<UserGroup>();
             InitializePartial();
         }
 

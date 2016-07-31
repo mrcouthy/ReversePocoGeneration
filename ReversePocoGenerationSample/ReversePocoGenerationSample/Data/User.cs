@@ -43,9 +43,9 @@ namespace ReversePocoGenerationSample.Data
 
         public User()
         {
-            UserGroups = new System.Collections.Generic.List<UserGroup>();
-            UserTablets = new System.Collections.Generic.List<UserTablet>();
-            Roles = new System.Collections.Generic.List<Role>();
+            UserGroups = new yyy<UserGroup>();
+            UserTablets = new yyy<UserTablet>();
+            Roles = new yyy<Role>();
             InitializePartial();
         }
 

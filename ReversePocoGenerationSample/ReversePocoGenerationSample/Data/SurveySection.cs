@@ -39,7 +39,7 @@ namespace ReversePocoGenerationSample.Data
 
         public SurveySection()
         {
-            Questions = new System.Collections.Generic.List<Question>();
+            Questions = new yyy<Question>();
             InitializePartial();
         }
 
