@@ -153,64 +153,64 @@ namespace ReversePocoGenerationSample.Data
         {
             base.OnModelCreating(modelBuilder);
 
-            modelBuilder.Configurations.Add(new AnswerConfiguration());
-            modelBuilder.Configurations.Add(new AnswerCommentConfiguration());
-            modelBuilder.Configurations.Add(new GroupConfiguration());
-            modelBuilder.Configurations.Add(new GroupSurveyConfiguration());
-            modelBuilder.Configurations.Add(new MatrixColConfiguration());
-            modelBuilder.Configurations.Add(new MatrixRowConfiguration());
-            modelBuilder.Configurations.Add(new MenuItemConfiguration());
-            modelBuilder.Configurations.Add(new OptionChoiceConfiguration());
-            modelBuilder.Configurations.Add(new OptionErrorConfiguration());
-            modelBuilder.Configurations.Add(new OrganizationConfiguration());
-            modelBuilder.Configurations.Add(new PredefinedDropdownConfiguration());
-            modelBuilder.Configurations.Add(new QuestionConfiguration());
-            modelBuilder.Configurations.Add(new QuestionOptionConfiguration());
-            modelBuilder.Configurations.Add(new QuestionTypeConfiguration());
-            modelBuilder.Configurations.Add(new RoleConfiguration());
-            modelBuilder.Configurations.Add(new RuleConfiguration());
-            modelBuilder.Configurations.Add(new SurveyConfiguration());
-            modelBuilder.Configurations.Add(new SurveyCommentConfiguration());
-            modelBuilder.Configurations.Add(new SurveyeeConfiguration());
-            modelBuilder.Configurations.Add(new SurveyeeSurveyCommentConfiguration());
-            modelBuilder.Configurations.Add(new SurveySectionConfiguration());
-            modelBuilder.Configurations.Add(new SysdiagramConfiguration());
-            modelBuilder.Configurations.Add(new TabletConfiguration());
-            modelBuilder.Configurations.Add(new UserConfiguration());
-            modelBuilder.Configurations.Add(new UserGroupConfiguration());
-            modelBuilder.Configurations.Add(new UserTabletConfiguration());
+            modelBuilder.Configurations.Add(new AnswerMapping());
+            modelBuilder.Configurations.Add(new AnswerCommentMapping());
+            modelBuilder.Configurations.Add(new GroupMapping());
+            modelBuilder.Configurations.Add(new GroupSurveyMapping());
+            modelBuilder.Configurations.Add(new MatrixColMapping());
+            modelBuilder.Configurations.Add(new MatrixRowMapping());
+            modelBuilder.Configurations.Add(new MenuItemMapping());
+            modelBuilder.Configurations.Add(new OptionChoiceMapping());
+            modelBuilder.Configurations.Add(new OptionErrorMapping());
+            modelBuilder.Configurations.Add(new OrganizationMapping());
+            modelBuilder.Configurations.Add(new PredefinedDropdownMapping());
+            modelBuilder.Configurations.Add(new QuestionMapping());
+            modelBuilder.Configurations.Add(new QuestionOptionMapping());
+            modelBuilder.Configurations.Add(new QuestionTypeMapping());
+            modelBuilder.Configurations.Add(new RoleMapping());
+            modelBuilder.Configurations.Add(new RuleMapping());
+            modelBuilder.Configurations.Add(new SurveyMapping());
+            modelBuilder.Configurations.Add(new SurveyCommentMapping());
+            modelBuilder.Configurations.Add(new SurveyeeMapping());
+            modelBuilder.Configurations.Add(new SurveyeeSurveyCommentMapping());
+            modelBuilder.Configurations.Add(new SurveySectionMapping());
+            modelBuilder.Configurations.Add(new SysdiagramMapping());
+            modelBuilder.Configurations.Add(new TabletMapping());
+            modelBuilder.Configurations.Add(new UserMapping());
+            modelBuilder.Configurations.Add(new UserGroupMapping());
+            modelBuilder.Configurations.Add(new UserTabletMapping());
 
             OnModelCreatingPartial(modelBuilder);
         }
 
         public static System.Data.Entity.DbModelBuilder CreateModel(System.Data.Entity.DbModelBuilder modelBuilder, string schema)
         {
-            modelBuilder.Configurations.Add(new AnswerConfiguration(schema));
-            modelBuilder.Configurations.Add(new AnswerCommentConfiguration(schema));
-            modelBuilder.Configurations.Add(new GroupConfiguration(schema));
-            modelBuilder.Configurations.Add(new GroupSurveyConfiguration(schema));
-            modelBuilder.Configurations.Add(new MatrixColConfiguration(schema));
-            modelBuilder.Configurations.Add(new MatrixRowConfiguration(schema));
-            modelBuilder.Configurations.Add(new MenuItemConfiguration(schema));
-            modelBuilder.Configurations.Add(new OptionChoiceConfiguration(schema));
-            modelBuilder.Configurations.Add(new OptionErrorConfiguration(schema));
-            modelBuilder.Configurations.Add(new OrganizationConfiguration(schema));
-            modelBuilder.Configurations.Add(new PredefinedDropdownConfiguration(schema));
-            modelBuilder.Configurations.Add(new QuestionConfiguration(schema));
-            modelBuilder.Configurations.Add(new QuestionOptionConfiguration(schema));
-            modelBuilder.Configurations.Add(new QuestionTypeConfiguration(schema));
-            modelBuilder.Configurations.Add(new RoleConfiguration(schema));
-            modelBuilder.Configurations.Add(new RuleConfiguration(schema));
-            modelBuilder.Configurations.Add(new SurveyConfiguration(schema));
-            modelBuilder.Configurations.Add(new SurveyCommentConfiguration(schema));
-            modelBuilder.Configurations.Add(new SurveyeeConfiguration(schema));
-            modelBuilder.Configurations.Add(new SurveyeeSurveyCommentConfiguration(schema));
-            modelBuilder.Configurations.Add(new SurveySectionConfiguration(schema));
-            modelBuilder.Configurations.Add(new SysdiagramConfiguration(schema));
-            modelBuilder.Configurations.Add(new TabletConfiguration(schema));
-            modelBuilder.Configurations.Add(new UserConfiguration(schema));
-            modelBuilder.Configurations.Add(new UserGroupConfiguration(schema));
-            modelBuilder.Configurations.Add(new UserTabletConfiguration(schema));
+            modelBuilder.Configurations.Add(new AnswerMapping(schema));
+            modelBuilder.Configurations.Add(new AnswerCommentMapping(schema));
+            modelBuilder.Configurations.Add(new GroupMapping(schema));
+            modelBuilder.Configurations.Add(new GroupSurveyMapping(schema));
+            modelBuilder.Configurations.Add(new MatrixColMapping(schema));
+            modelBuilder.Configurations.Add(new MatrixRowMapping(schema));
+            modelBuilder.Configurations.Add(new MenuItemMapping(schema));
+            modelBuilder.Configurations.Add(new OptionChoiceMapping(schema));
+            modelBuilder.Configurations.Add(new OptionErrorMapping(schema));
+            modelBuilder.Configurations.Add(new OrganizationMapping(schema));
+            modelBuilder.Configurations.Add(new PredefinedDropdownMapping(schema));
+            modelBuilder.Configurations.Add(new QuestionMapping(schema));
+            modelBuilder.Configurations.Add(new QuestionOptionMapping(schema));
+            modelBuilder.Configurations.Add(new QuestionTypeMapping(schema));
+            modelBuilder.Configurations.Add(new RoleMapping(schema));
+            modelBuilder.Configurations.Add(new RuleMapping(schema));
+            modelBuilder.Configurations.Add(new SurveyMapping(schema));
+            modelBuilder.Configurations.Add(new SurveyCommentMapping(schema));
+            modelBuilder.Configurations.Add(new SurveyeeMapping(schema));
+            modelBuilder.Configurations.Add(new SurveyeeSurveyCommentMapping(schema));
+            modelBuilder.Configurations.Add(new SurveySectionMapping(schema));
+            modelBuilder.Configurations.Add(new SysdiagramMapping(schema));
+            modelBuilder.Configurations.Add(new TabletMapping(schema));
+            modelBuilder.Configurations.Add(new UserMapping(schema));
+            modelBuilder.Configurations.Add(new UserGroupMapping(schema));
+            modelBuilder.Configurations.Add(new UserTabletMapping(schema));
             return modelBuilder;
         }
 
@@ -1233,14 +1233,14 @@ namespace ReversePocoGenerationSample.Data
 
     // Answer
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.22.1.0")]
-    public partial class AnswerConfiguration : System.Data.Entity.ModelConfiguration.EntityTypeConfiguration<Answer>
+    public partial class AnswerMapping : System.Data.Entity.ModelConfiguration.EntityTypeConfiguration<Answer>
     {
-        public AnswerConfiguration()
+        public AnswerMapping()
             : this("dbo")
         {
         }
 
-        public AnswerConfiguration(string schema)
+        public AnswerMapping(string schema)
         {
             ToTable("Answer", schema);
             HasKey(x => x.AnswerId);
@@ -1271,14 +1271,14 @@ namespace ReversePocoGenerationSample.Data
 
     // AnswerComment
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.22.1.0")]
-    public partial class AnswerCommentConfiguration : System.Data.Entity.ModelConfiguration.EntityTypeConfiguration<AnswerComment>
+    public partial class AnswerCommentMapping : System.Data.Entity.ModelConfiguration.EntityTypeConfiguration<AnswerComment>
     {
-        public AnswerCommentConfiguration()
+        public AnswerCommentMapping()
             : this("dbo")
         {
         }
 
-        public AnswerCommentConfiguration(string schema)
+        public AnswerCommentMapping(string schema)
         {
             ToTable("AnswerComment", schema);
             HasKey(x => x.QuestionCommentId);
@@ -1294,14 +1294,14 @@ namespace ReversePocoGenerationSample.Data
 
     // Group
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.22.1.0")]
-    public partial class GroupConfiguration : System.Data.Entity.ModelConfiguration.EntityTypeConfiguration<Group>
+    public partial class GroupMapping : System.Data.Entity.ModelConfiguration.EntityTypeConfiguration<Group>
     {
-        public GroupConfiguration()
+        public GroupMapping()
             : this("dbo")
         {
         }
 
-        public GroupConfiguration(string schema)
+        public GroupMapping(string schema)
         {
             ToTable("Group", schema);
             HasKey(x => x.GroupId);
@@ -1324,14 +1324,14 @@ namespace ReversePocoGenerationSample.Data
 
     // GroupSurvey
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.22.1.0")]
-    public partial class GroupSurveyConfiguration : System.Data.Entity.ModelConfiguration.EntityTypeConfiguration<GroupSurvey>
+    public partial class GroupSurveyMapping : System.Data.Entity.ModelConfiguration.EntityTypeConfiguration<GroupSurvey>
     {
-        public GroupSurveyConfiguration()
+        public GroupSurveyMapping()
             : this("dbo")
         {
         }
 
-        public GroupSurveyConfiguration(string schema)
+        public GroupSurveyMapping(string schema)
         {
             ToTable("GroupSurvey", schema);
             HasKey(x => x.GroupSurveyId);
@@ -1358,14 +1358,14 @@ namespace ReversePocoGenerationSample.Data
 
     // MatrixCol
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.22.1.0")]
-    public partial class MatrixColConfiguration : System.Data.Entity.ModelConfiguration.EntityTypeConfiguration<MatrixCol>
+    public partial class MatrixColMapping : System.Data.Entity.ModelConfiguration.EntityTypeConfiguration<MatrixCol>
     {
-        public MatrixColConfiguration()
+        public MatrixColMapping()
             : this("dbo")
         {
         }
 
-        public MatrixColConfiguration(string schema)
+        public MatrixColMapping(string schema)
         {
             ToTable("MatrixCol", schema);
             HasKey(x => x.ColumnId);
@@ -1385,14 +1385,14 @@ namespace ReversePocoGenerationSample.Data
 
     // MatrixRow
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.22.1.0")]
-    public partial class MatrixRowConfiguration : System.Data.Entity.ModelConfiguration.EntityTypeConfiguration<MatrixRow>
+    public partial class MatrixRowMapping : System.Data.Entity.ModelConfiguration.EntityTypeConfiguration<MatrixRow>
     {
-        public MatrixRowConfiguration()
+        public MatrixRowMapping()
             : this("dbo")
         {
         }
 
-        public MatrixRowConfiguration(string schema)
+        public MatrixRowMapping(string schema)
         {
             ToTable("MatrixRow", schema);
             HasKey(x => x.RowId);
@@ -1412,14 +1412,14 @@ namespace ReversePocoGenerationSample.Data
 
     // MenuItem
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.22.1.0")]
-    public partial class MenuItemConfiguration : System.Data.Entity.ModelConfiguration.EntityTypeConfiguration<MenuItem>
+    public partial class MenuItemMapping : System.Data.Entity.ModelConfiguration.EntityTypeConfiguration<MenuItem>
     {
-        public MenuItemConfiguration()
+        public MenuItemMapping()
             : this("dbo")
         {
         }
 
-        public MenuItemConfiguration(string schema)
+        public MenuItemMapping(string schema)
         {
             ToTable("MenuItem", schema);
             HasKey(x => x.Id);
@@ -1437,14 +1437,14 @@ namespace ReversePocoGenerationSample.Data
 
     // OptionChoice
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.22.1.0")]
-    public partial class OptionChoiceConfiguration : System.Data.Entity.ModelConfiguration.EntityTypeConfiguration<OptionChoice>
+    public partial class OptionChoiceMapping : System.Data.Entity.ModelConfiguration.EntityTypeConfiguration<OptionChoice>
     {
-        public OptionChoiceConfiguration()
+        public OptionChoiceMapping()
             : this("dbo")
         {
         }
 
-        public OptionChoiceConfiguration(string schema)
+        public OptionChoiceMapping(string schema)
         {
             ToTable("OptionChoice", schema);
             HasKey(x => x.OptionChoiceId);
@@ -1459,14 +1459,14 @@ namespace ReversePocoGenerationSample.Data
 
     // OptionError
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.22.1.0")]
-    public partial class OptionErrorConfiguration : System.Data.Entity.ModelConfiguration.EntityTypeConfiguration<OptionError>
+    public partial class OptionErrorMapping : System.Data.Entity.ModelConfiguration.EntityTypeConfiguration<OptionError>
     {
-        public OptionErrorConfiguration()
+        public OptionErrorMapping()
             : this("dbo")
         {
         }
 
-        public OptionErrorConfiguration(string schema)
+        public OptionErrorMapping(string schema)
         {
             ToTable("OptionError", schema);
             HasKey(x => x.OptionErrorId);
@@ -1481,14 +1481,14 @@ namespace ReversePocoGenerationSample.Data
 
     // Organization
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.22.1.0")]
-    public partial class OrganizationConfiguration : System.Data.Entity.ModelConfiguration.EntityTypeConfiguration<Organization>
+    public partial class OrganizationMapping : System.Data.Entity.ModelConfiguration.EntityTypeConfiguration<Organization>
     {
-        public OrganizationConfiguration()
+        public OrganizationMapping()
             : this("dbo")
         {
         }
 
-        public OrganizationConfiguration(string schema)
+        public OrganizationMapping(string schema)
         {
             ToTable("Organization", schema);
             HasKey(x => x.OrganizationId);
@@ -1511,14 +1511,14 @@ namespace ReversePocoGenerationSample.Data
 
     // PredefinedDropdown
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.22.1.0")]
-    public partial class PredefinedDropdownConfiguration : System.Data.Entity.ModelConfiguration.EntityTypeConfiguration<PredefinedDropdown>
+    public partial class PredefinedDropdownMapping : System.Data.Entity.ModelConfiguration.EntityTypeConfiguration<PredefinedDropdown>
     {
-        public PredefinedDropdownConfiguration()
+        public PredefinedDropdownMapping()
             : this("dbo")
         {
         }
 
-        public PredefinedDropdownConfiguration(string schema)
+        public PredefinedDropdownMapping(string schema)
         {
             ToTable("PredefinedDropdown", schema);
             HasKey(x => x.PredefinedDropdownId);
@@ -1534,14 +1534,14 @@ namespace ReversePocoGenerationSample.Data
 
     // Question
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.22.1.0")]
-    public partial class QuestionConfiguration : System.Data.Entity.ModelConfiguration.EntityTypeConfiguration<Question>
+    public partial class QuestionMapping : System.Data.Entity.ModelConfiguration.EntityTypeConfiguration<Question>
     {
-        public QuestionConfiguration()
+        public QuestionMapping()
             : this("dbo")
         {
         }
 
-        public QuestionConfiguration(string schema)
+        public QuestionMapping(string schema)
         {
             ToTable("Question", schema);
             HasKey(x => x.QuestionId);
@@ -1585,14 +1585,14 @@ namespace ReversePocoGenerationSample.Data
 
     // QuestionOption
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.22.1.0")]
-    public partial class QuestionOptionConfiguration : System.Data.Entity.ModelConfiguration.EntityTypeConfiguration<QuestionOption>
+    public partial class QuestionOptionMapping : System.Data.Entity.ModelConfiguration.EntityTypeConfiguration<QuestionOption>
     {
-        public QuestionOptionConfiguration()
+        public QuestionOptionMapping()
             : this("dbo")
         {
         }
 
-        public QuestionOptionConfiguration(string schema)
+        public QuestionOptionMapping(string schema)
         {
             ToTable("QuestionOption", schema);
             HasKey(x => x.QuestionOptionId);
@@ -1613,14 +1613,14 @@ namespace ReversePocoGenerationSample.Data
 
     // QuestionType
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.22.1.0")]
-    public partial class QuestionTypeConfiguration : System.Data.Entity.ModelConfiguration.EntityTypeConfiguration<QuestionType>
+    public partial class QuestionTypeMapping : System.Data.Entity.ModelConfiguration.EntityTypeConfiguration<QuestionType>
     {
-        public QuestionTypeConfiguration()
+        public QuestionTypeMapping()
             : this("dbo")
         {
         }
 
-        public QuestionTypeConfiguration(string schema)
+        public QuestionTypeMapping(string schema)
         {
             ToTable("QuestionType", schema);
             HasKey(x => x.QuestionTypeId);
@@ -1634,14 +1634,14 @@ namespace ReversePocoGenerationSample.Data
 
     // Role
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.22.1.0")]
-    public partial class RoleConfiguration : System.Data.Entity.ModelConfiguration.EntityTypeConfiguration<Role>
+    public partial class RoleMapping : System.Data.Entity.ModelConfiguration.EntityTypeConfiguration<Role>
     {
-        public RoleConfiguration()
+        public RoleMapping()
             : this("dbo")
         {
         }
 
-        public RoleConfiguration(string schema)
+        public RoleMapping(string schema)
         {
             ToTable("Role", schema);
             HasKey(x => x.RoleId);
@@ -1669,14 +1669,14 @@ namespace ReversePocoGenerationSample.Data
 
     // Rule
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.22.1.0")]
-    public partial class RuleConfiguration : System.Data.Entity.ModelConfiguration.EntityTypeConfiguration<Rule>
+    public partial class RuleMapping : System.Data.Entity.ModelConfiguration.EntityTypeConfiguration<Rule>
     {
-        public RuleConfiguration()
+        public RuleMapping()
             : this("dbo")
         {
         }
 
-        public RuleConfiguration(string schema)
+        public RuleMapping(string schema)
         {
             ToTable("Rule", schema);
             HasKey(x => x.RuleId);
@@ -1691,14 +1691,14 @@ namespace ReversePocoGenerationSample.Data
 
     // Survey
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.22.1.0")]
-    public partial class SurveyConfiguration : System.Data.Entity.ModelConfiguration.EntityTypeConfiguration<Survey>
+    public partial class SurveyMapping : System.Data.Entity.ModelConfiguration.EntityTypeConfiguration<Survey>
     {
-        public SurveyConfiguration()
+        public SurveyMapping()
             : this("dbo")
         {
         }
 
-        public SurveyConfiguration(string schema)
+        public SurveyMapping(string schema)
         {
             ToTable("Survey", schema);
             HasKey(x => x.SurveyId);
@@ -1727,14 +1727,14 @@ namespace ReversePocoGenerationSample.Data
 
     // SurveyComment
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.22.1.0")]
-    public partial class SurveyCommentConfiguration : System.Data.Entity.ModelConfiguration.EntityTypeConfiguration<SurveyComment>
+    public partial class SurveyCommentMapping : System.Data.Entity.ModelConfiguration.EntityTypeConfiguration<SurveyComment>
     {
-        public SurveyCommentConfiguration()
+        public SurveyCommentMapping()
             : this("dbo")
         {
         }
 
-        public SurveyCommentConfiguration(string schema)
+        public SurveyCommentMapping(string schema)
         {
             ToTable("SurveyComment", schema);
             HasKey(x => x.SurveyCommentsId);
@@ -1752,14 +1752,14 @@ namespace ReversePocoGenerationSample.Data
 
     // Surveyee
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.22.1.0")]
-    public partial class SurveyeeConfiguration : System.Data.Entity.ModelConfiguration.EntityTypeConfiguration<Surveyee>
+    public partial class SurveyeeMapping : System.Data.Entity.ModelConfiguration.EntityTypeConfiguration<Surveyee>
     {
-        public SurveyeeConfiguration()
+        public SurveyeeMapping()
             : this("dbo")
         {
         }
 
-        public SurveyeeConfiguration(string schema)
+        public SurveyeeMapping(string schema)
         {
             ToTable("Surveyee", schema);
             HasKey(x => x.SurveyeeGuid);
@@ -1782,14 +1782,14 @@ namespace ReversePocoGenerationSample.Data
 
     // SurveyeeSurveyComment
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.22.1.0")]
-    public partial class SurveyeeSurveyCommentConfiguration : System.Data.Entity.ModelConfiguration.EntityTypeConfiguration<SurveyeeSurveyComment>
+    public partial class SurveyeeSurveyCommentMapping : System.Data.Entity.ModelConfiguration.EntityTypeConfiguration<SurveyeeSurveyComment>
     {
-        public SurveyeeSurveyCommentConfiguration()
+        public SurveyeeSurveyCommentMapping()
             : this("dbo")
         {
         }
 
-        public SurveyeeSurveyCommentConfiguration(string schema)
+        public SurveyeeSurveyCommentMapping(string schema)
         {
             ToTable("SurveyeeSurveyComment", schema);
             HasKey(x => x.CommentId);
@@ -1805,14 +1805,14 @@ namespace ReversePocoGenerationSample.Data
 
     // SurveySection
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.22.1.0")]
-    public partial class SurveySectionConfiguration : System.Data.Entity.ModelConfiguration.EntityTypeConfiguration<SurveySection>
+    public partial class SurveySectionMapping : System.Data.Entity.ModelConfiguration.EntityTypeConfiguration<SurveySection>
     {
-        public SurveySectionConfiguration()
+        public SurveySectionMapping()
             : this("dbo")
         {
         }
 
-        public SurveySectionConfiguration(string schema)
+        public SurveySectionMapping(string schema)
         {
             ToTable("SurveySection", schema);
             HasKey(x => x.SectionId);
@@ -1840,14 +1840,14 @@ namespace ReversePocoGenerationSample.Data
 
     // sysdiagrams
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.22.1.0")]
-    public partial class SysdiagramConfiguration : System.Data.Entity.ModelConfiguration.EntityTypeConfiguration<Sysdiagram>
+    public partial class SysdiagramMapping : System.Data.Entity.ModelConfiguration.EntityTypeConfiguration<Sysdiagram>
     {
-        public SysdiagramConfiguration()
+        public SysdiagramMapping()
             : this("dbo")
         {
         }
 
-        public SysdiagramConfiguration(string schema)
+        public SysdiagramMapping(string schema)
         {
             ToTable("sysdiagrams", schema);
             HasKey(x => x.DiagramId);
@@ -1864,14 +1864,14 @@ namespace ReversePocoGenerationSample.Data
 
     // Tablet
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.22.1.0")]
-    public partial class TabletConfiguration : System.Data.Entity.ModelConfiguration.EntityTypeConfiguration<Tablet>
+    public partial class TabletMapping : System.Data.Entity.ModelConfiguration.EntityTypeConfiguration<Tablet>
     {
-        public TabletConfiguration()
+        public TabletMapping()
             : this("dbo")
         {
         }
 
-        public TabletConfiguration(string schema)
+        public TabletMapping(string schema)
         {
             ToTable("Tablet", schema);
             HasKey(x => x.TabletId);
@@ -1895,14 +1895,14 @@ namespace ReversePocoGenerationSample.Data
 
     // User
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.22.1.0")]
-    public partial class UserConfiguration : System.Data.Entity.ModelConfiguration.EntityTypeConfiguration<User>
+    public partial class UserMapping : System.Data.Entity.ModelConfiguration.EntityTypeConfiguration<User>
     {
-        public UserConfiguration()
+        public UserMapping()
             : this("dbo")
         {
         }
 
-        public UserConfiguration(string schema)
+        public UserMapping(string schema)
         {
             ToTable("User", schema);
             HasKey(x => x.UserId);
@@ -1932,14 +1932,14 @@ namespace ReversePocoGenerationSample.Data
 
     // UserGroup
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.22.1.0")]
-    public partial class UserGroupConfiguration : System.Data.Entity.ModelConfiguration.EntityTypeConfiguration<UserGroup>
+    public partial class UserGroupMapping : System.Data.Entity.ModelConfiguration.EntityTypeConfiguration<UserGroup>
     {
-        public UserGroupConfiguration()
+        public UserGroupMapping()
             : this("dbo")
         {
         }
 
-        public UserGroupConfiguration(string schema)
+        public UserGroupMapping(string schema)
         {
             ToTable("UserGroup", schema);
             HasKey(x => x.UserGroupId);
@@ -1967,14 +1967,14 @@ namespace ReversePocoGenerationSample.Data
 
     // UserTablet
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.22.1.0")]
-    public partial class UserTabletConfiguration : System.Data.Entity.ModelConfiguration.EntityTypeConfiguration<UserTablet>
+    public partial class UserTabletMapping : System.Data.Entity.ModelConfiguration.EntityTypeConfiguration<UserTablet>
     {
-        public UserTabletConfiguration()
+        public UserTabletMapping()
             : this("dbo")
         {
         }
 
-        public UserTabletConfiguration(string schema)
+        public UserTabletMapping(string schema)
         {
             ToTable("UserTablet", schema);
             HasKey(x => x.UserTabletId);
