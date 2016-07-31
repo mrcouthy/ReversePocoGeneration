@@ -1,0 +1,190 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9214E847-23AA-4E5E-AABA-6278153F57A6}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MigrationDemo</RootNamespace>
+    <AssemblyName>MigrationDemo</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AbOrderLinesAb.cs">
+      <DependentUpon>efdemo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AbOrderLinesAbConfiguration.cs">
+      <DependentUpon>efdemo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AbOrdersAb.cs">
+      <DependentUpon>efdemo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AbOrdersAbConfiguration.cs">
+      <DependentUpon>efdemo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Db.cs">
+      <DependentUpon>efdemo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="efdemo.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>efdemo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EngineerCompany.cs">
+      <DependentUpon>efdemo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EngineerCompanyConfiguration.cs">
+      <DependentUpon>efdemo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EngineerPerson.cs">
+      <DependentUpon>efdemo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EngineerPersonBilling.cs">
+      <DependentUpon>efdemo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EngineerPersonBillingConfiguration.cs">
+      <DependentUpon>efdemo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EngineerPersonBillingInfo.cs">
+      <DependentUpon>efdemo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EngineerPersonBillingInfoConfiguration.cs">
+      <DependentUpon>efdemo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EngineerPersonBillingProcessor.cs">
+      <DependentUpon>efdemo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EngineerPersonBillingProcessorConfiguration.cs">
+      <DependentUpon>efdemo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EngineerPersonConfiguration.cs">
+      <DependentUpon>efdemo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetEngineer.cs">
+      <DependentUpon>efdemo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetEngineerConfiguration.cs">
+      <DependentUpon>efdemo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="IDb.cs">
+      <DependentUpon>efdemo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MigrationConfiguration.cs">
+      <DependentUpon>efdemo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Symbol.cs">
+      <DependentUpon>efdemo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SymbolConfiguration.cs">
+      <DependentUpon>efdemo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TableWithSpace.cs">
+      <DependentUpon>efdemo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TableWithSpaceAndInColumn.cs">
+      <DependentUpon>efdemo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TableWithSpaceAndInColumnConfiguration.cs">
+      <DependentUpon>efdemo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TableWithSpaceConfiguration.cs">
+      <DependentUpon>efdemo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TableWithSpaceInColumnOnly.cs">
+      <DependentUpon>efdemo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TableWithSpaceInColumnOnlyConfiguration.cs">
+      <DependentUpon>efdemo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblOrder.cs">
+      <DependentUpon>efdemo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblOrderConfiguration.cs">
+      <DependentUpon>efdemo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblOrderError.cs">
+      <DependentUpon>efdemo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblOrderErrorConfiguration.cs">
+      <DependentUpon>efdemo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblOrderErrorsAb.cs">
+      <DependentUpon>efdemo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblOrderErrorsAbConfiguration.cs">
+      <DependentUpon>efdemo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblOrderLine.cs">
+      <DependentUpon>efdemo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblOrderLineConfiguration.cs">
+      <DependentUpon>efdemo.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="efdemo.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>efdemo.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
