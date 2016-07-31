@@ -8,7 +8,7 @@
 //
 // The following connection settings were used to generate this file:
 //     Configuration file:     "ReversePocoGenerationSample\App.config"
-//     Connection String Name: "SurveydbContext"
+//     Connection String Name: "Surveydb"
 //     Connection String:      "Data Source=lenovo-pc;Initial Catalog=Surveydb;Persist Security Info=True;User ID=sa;password=**zapped**;;MultipleActiveResultSets=True"
 // ------------------------------------------------------------------------------------------------
 // Database Edition       : Enterprise Edition (64-bit)
@@ -106,7 +106,7 @@ namespace ReversePocoGenerationSample.Data
         }
 
         public TestDbContext()
-            : base("Name=SurveydbContext")
+            : base("Name=Surveydb")
         {
             InitializePartial();
         }
