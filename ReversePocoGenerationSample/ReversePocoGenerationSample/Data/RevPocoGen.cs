@@ -32,7 +32,7 @@ namespace ReversePocoGenerationSample.Data
 
     #region Unit of work
 
-    public interface IMyDbContext : System.IDisposable
+    public interface ITestDbContext : System.IDisposable
     {
         System.Data.Entity.DbSet<Answer> Answers { get; set; } // Answer
         System.Data.Entity.DbSet<AnswerComment> AnswerComments { get; set; } // AnswerComment
@@ -71,7 +71,7 @@ namespace ReversePocoGenerationSample.Data
     #region Database context
 
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.22.1.0")]
-    public class MyDbContext : System.Data.Entity.DbContext, IMyDbContext
+    public class TestDbContext : System.Data.Entity.DbContext, ITestDbContext
     {
         public System.Data.Entity.DbSet<Answer> Answers { get; set; } // Answer
         public System.Data.Entity.DbSet<AnswerComment> AnswerComments { get; set; } // AnswerComment
@@ -100,32 +100,32 @@ namespace ReversePocoGenerationSample.Data
         public System.Data.Entity.DbSet<UserGroup> UserGroups { get; set; } // UserGroup
         public System.Data.Entity.DbSet<UserTablet> UserTablets { get; set; } // UserTablet
 
-        static MyDbContext()
+        static TestDbContext()
         {
-            System.Data.Entity.Database.SetInitializer<MyDbContext>(null);
+            System.Data.Entity.Database.SetInitializer<TestDbContext>(null);
         }
 
-        public MyDbContext()
+        public TestDbContext()
             : base("Name=SurveydbContext")
         {
         }
 
-        public MyDbContext(string connectionString)
+        public TestDbContext(string connectionString)
             : base(connectionString)
         {
         }
 
-        public MyDbContext(string connectionString, System.Data.Entity.Infrastructure.DbCompiledModel model)
+        public TestDbContext(string connectionString, System.Data.Entity.Infrastructure.DbCompiledModel model)
             : base(connectionString, model)
         {
         }
 
-        public MyDbContext(System.Data.Common.DbConnection existingConnection, bool contextOwnsConnection)
+        public TestDbContext(System.Data.Common.DbConnection existingConnection, bool contextOwnsConnection)
             : base(existingConnection, contextOwnsConnection)
         {
         }
 
-        public MyDbContext(System.Data.Common.DbConnection existingConnection, System.Data.Entity.Infrastructure.DbCompiledModel model, bool contextOwnsConnection)
+        public TestDbContext(System.Data.Common.DbConnection existingConnection, System.Data.Entity.Infrastructure.DbCompiledModel model, bool contextOwnsConnection)
             : base(existingConnection, model, contextOwnsConnection)
         {
         }
@@ -212,7 +212,7 @@ namespace ReversePocoGenerationSample.Data
     #region Fake Database context
 
     [System.CodeDom.Compiler.GeneratedCode("EF.Reverse.POCO.Generator", "2.22.1.0")]
-    public class FakeMyDbContext : IMyDbContext
+    public class FakeTestDbContext : ITestDbContext
     {
         public System.Data.Entity.DbSet<Answer> Answers { get; set; }
         public System.Data.Entity.DbSet<AnswerComment> AnswerComments { get; set; }
@@ -241,7 +241,7 @@ namespace ReversePocoGenerationSample.Data
         public System.Data.Entity.DbSet<UserGroup> UserGroups { get; set; }
         public System.Data.Entity.DbSet<UserTablet> UserTablets { get; set; }
 
-        public FakeMyDbContext()
+        public FakeTestDbContext()
         {
             Answers = new FakeDbSet<Answer>("AnswerId");
             AnswerComments = new FakeDbSet<AnswerComment>("QuestionCommentId");
